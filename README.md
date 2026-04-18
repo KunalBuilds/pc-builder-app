@@ -2,7 +2,7 @@
 
 A PC Builder app for the Indian market. Build, compare, and get AI-powered upgrade suggestions for your PC.
 
-📥 **[Download the App (APK)](installapp.apk?raw=true)**
+📥 **[Download the App (APK)](https://raw.githubusercontent.com/KunalBuilds/pc-builder-app/master/installapp.apk)**
 
 ## 🌟 Premium Features
 - 🤖 **AI Build Analysis**: Integration with Google Gemini to provide 4K/1080p FPS predictions and personalized upgrade paths.
