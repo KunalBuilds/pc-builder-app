@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Budget Planner — Stitch "PC Architect Explorer" -->
+<!-- HTML ref: budget_planner/code.html -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <!-- TOP APP BAR -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/surface_container_low"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="20dp"
+        android:orientation="horizontal"
+        android:elevation="4dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="PC ARCHITECT"
+            android:textColor="@color/primary"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.04" />
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/pc_builder_icon"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingBottom="40dp">
+
+            <!-- ============================================================
+                 HERO SECTION — text-center mb-16
+            ============================================================ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingTop="36dp"
+                android:paddingBottom="36dp">
+
+                <!-- AI badge chip: bg-tertiary-fixed -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/tertiary_fixed"
+                    android:paddingHorizontal="14dp"
+                    android:paddingVertical="6dp"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AI Optimization Engine"
+                        android:textColor="@color/on_tertiary_fixed_variant"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.1" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Set Your Horizon"
+                    android:textColor="@color/on_surface"
+                    android:textSize="38sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="-0.02"
+                    android:gravity="center"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Define your investment. Our neural engine will orchestrate the ultimate performance-per-dollar build."
+                    android:textColor="@color/on_surface_variant"
+                    android:textSize="15sp"
+                    android:lineSpacingMultiplier="1.4"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <!-- ============================================================
+                 BUDGET INPUT MODULE — bg-surface-container-low rounded-2xl
+            ============================================================ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/surface_container_low"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="24dp"
+                android:layout_marginBottom="24dp">
+
+                <!-- ARCHITECT SELECTION INFO (NEW) -->
+                <LinearLayout
+                    android:id="@+id/layoutUserSelection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:visibility="gone">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="YOUR ARCHITECT SELECTIONS"
+                        android:textColor="@color/primary"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.2"
+                        android:layout_marginBottom="4dp" />
+                    <TextView
+                        android:id="@+id/tvUserSelectionCost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹0 (0 components)"
+                        android:textColor="@color/on_surface"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                    <View
+                        android:layout_width="40dp"
+                        android:layout_height="1dp"
+                        android:background="@color/outline_variant"
+                        android:layout_marginTop="12dp" />
+                </LinearLayout>
+
+                <!-- TARGET BUDGET label -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TARGET BUDGET"
+                    android:textColor="@color/on_surface_variant"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.2"
+                    android:gravity="center"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Large budget display -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="bottom"
+                    android:layout_marginBottom="28dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹"
+                        android:textColor="@color/on_surface_variant"
+                        android:textSize="28sp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="4dp" />
+
+                    <EditText
+                        android:id="@+id/etBudget"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="50,000"
+                        android:textColor="@color/primary"
+                        android:textSize="64sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="-0.03"
+                        android:background="@null"
+                        android:inputType="numberDecimal"
+                        android:gravity="center"
+                        android:minWidth="180dp" />
+                </LinearLayout>
+
+                <!-- Slider: range bar -->
+                <SeekBar
+                    android:id="@+id/budgetSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="200000"
+                    android:progress="50000"
+                    android:progressTint="@color/primary"
+                    android:thumbTint="@color/primary"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Range labels -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="28dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹10,000"
+                        android:textColor="@color/outline"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.1" />
+                    <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹2,00,000"
+                        android:textColor="@color/outline"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.1" />
+                </LinearLayout>
+
+                <!-- QUICK SELECT CHIP ROW -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="32dp">
+
+                    <TextView
+                        android:id="@+id/chip30k"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="₹30k"
+                        android:textColor="@color/on_surface_variant"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:background="@color/surface_container_highest"
+                        android:paddingHorizontal="14dp"
+                        android:layout_marginEnd="8dp"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                    <TextView
+                        android:id="@+id/chip50k"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="₹50k"
+                        android:textColor="@color/primary"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:background="@color/primary_fixed"
+                        android:paddingHorizontal="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                    <TextView
+                        android:id="@+id/chip75k"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="₹75k"
+                        android:textColor="@color/on_surface_variant"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:background="@color/surface_container_highest"
+                        android:paddingHorizontal="14dp"
+                        android:layout_marginEnd="8dp"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                    <TextView
+                        android:id="@+id/chip100k"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="₹1L"
+                        android:textColor="@color/on_surface_variant"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:background="@color/surface_container_highest"
+                        android:paddingHorizontal="14dp"
+                        android:clickable="true"
+                        android:focusable="true" />
+                </LinearLayout>
+
+                <!-- AI CTA button: gradient pill -->
+                <Button
+                    android:id="@+id/btnGetAISuggestions"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="🤖  GENERATE AI BUILD"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:letterSpacing="0.05"
+                    android:background="@drawable/btn_neon_gradient"
+                    android:stateListAnimator="@null"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Neural engine status -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <View
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:background="@color/tertiary"
+                        android:layout_marginEnd="8dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NEURAL ENGINE READY"
+                        android:textColor="@color/tertiary"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.15" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Progress (shown during AI build) -->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminateTint="@color/primary"
+                android:visibility="gone" />
+
+            <!-- ============================================================
+                 EXPLODED VIEW INFO CARDS — 3 left-border cards (opacity 60%)
+            ============================================================ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:alpha="0.6"
+                android:layout_marginTop="32dp">
+
+                <!-- Architecture card: border-l-4 border-primary -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/surface_container_low"
+                    android:layout_marginBottom="12dp">
+                    <View android:layout_width="4dp" android:layout_height="match_parent"
+                        android:background="@color/primary" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="⬛  ARCHITECTURE" android:textColor="@color/primary"
+                            android:textSize="12sp" android:textStyle="bold" android:layout_marginBottom="4dp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="ARCHITECTURE" android:textColor="@color/on_surface"
+                            android:textSize="13sp" android:textStyle="bold" android:layout_marginBottom="4dp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Multi-dimensional component mapping based on current market volatility indices."
+                            android:textColor="@color/on_surface_variant" android:textSize="12sp"
+                            android:lineSpacingMultiplier="1.4" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Benchmarks card: border-tertiary -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/surface_container_low"
+                    android:layout_marginBottom="12dp">
+                    <View android:layout_width="4dp" android:layout_height="match_parent"
+                        android:background="@color/tertiary" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="📊  BENCHMARKS" android:textColor="@color/tertiary"
+                            android:textSize="12sp" android:textStyle="bold" android:layout_marginBottom="4dp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Synthesizing real-world FPS data from 45,000+ validated hardware configurations."
+                            android:textColor="@color/on_surface_variant" android:textSize="12sp"
+                            android:lineSpacingMultiplier="1.4" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Equilibrium card: border-secondary -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/surface_container_low">
+                    <View android:layout_width="4dp" android:layout_height="match_parent"
+                        android:background="@color/secondary" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="⚖  EQUILIBRIUM" android:textColor="@color/secondary"
+                            android:textSize="12sp" android:textStyle="bold" android:layout_marginBottom="4dp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Advanced bottleneck prevention ensuring no single component limits your vision."
+                            android:textColor="@color/on_surface_variant" android:textSize="12sp"
+                            android:lineSpacingMultiplier="1.4" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ============================================================
+                 HIDDEN FUNCTIONAL VIEWS (required by BudgetInputActivity.kt)
+                 These are hidden initially and shown only when AI is building
+            ============================================================ -->
+
+            <!-- AI Loading state -->
+            <LinearLayout
+                android:id="@+id/layoutAiLoading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingVertical="24dp"
+                android:visibility="gone">
+                <ProgressBar
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:indeterminateTint="@color/primary"
+                    android:layout_marginBottom="16dp" />
+                <TextView
+                    android:id="@+id/tvAiStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Initializing AI..."
+                    android:textColor="@color/on_surface_variant"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <!-- AI Result card -->
+            <LinearLayout
+                android:id="@+id/layoutAiResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/tertiary_fixed"
+                android:padding="20dp"
+                android:layout_marginTop="16dp"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🤖  AI BUILD COMPLETE"
+                    android:textColor="@color/on_tertiary_fixed"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.12"
+                    android:layout_marginBottom="8dp" />
+                <TextView
+                    android:id="@+id/tvAiBuildTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹0 / ₹0"
+                    android:textColor="@color/on_tertiary_fixed"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="-0.02"
+                    android:layout_marginBottom="6dp" />
+                <TextView
+                    android:id="@+id/tvAiComponentCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 components selected"
+                    android:textColor="@color/on_tertiary_fixed_variant"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="20dp" />
+                <Button
+                    android:id="@+id/btnViewAiBuild"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="VIEW FULL BUILD →"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/btn_neon_gradient"
+                    android:stateListAnimator="@null"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <!-- Alias for Kotlin: btnGetSuggestions → same as btnGetAISuggestions -->
+            <Button
+                android:id="@+id/btnGetSuggestions"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                android:text="" />
+
+            <!-- Hidden chip alias for chip150k (used by BudgetInputActivity) -->
+            <TextView
+                android:id="@+id/chip150k"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                android:text="" />
+
+            <!-- Progress bar for AI building (indeterminate) -->
+            <ProgressBar
+                android:id="@+id/progressAiBuild"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/primary"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

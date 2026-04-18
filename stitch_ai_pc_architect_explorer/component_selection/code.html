@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#adc6ff",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e3e2e7",
+                    "surface-container": "#eeedf3",
+                    "on-primary-fixed-variant": "#004493",
+                    "surface-dim": "#dad9df",
+                    "tertiary": "#9e3d00",
+                    "tertiary-fixed": "#ffdbcc",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-container": "#fffbff",
+                    "primary-fixed-dim": "#adc6ff",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#3631b4",
+                    "surface-container-high": "#e9e7ed",
+                    "background": "#faf9fe",
+                    "primary": "#0058bc",
+                    "on-tertiary-fixed": "#351000",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#f1f0f5",
+                    "surface-container-low": "#f4f3f8",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#c64f00",
+                    "secondary": "#4c4aca",
+                    "surface-container-highest": "#e3e2e7",
+                    "on-tertiary-fixed-variant": "#7c2e00",
+                    "surface-bright": "#faf9fe",
+                    "on-primary-fixed": "#001a41",
+                    "on-surface": "#1a1b1f",
+                    "tertiary-fixed-dim": "#ffb595",
+                    "on-secondary-container": "#fffbff",
+                    "surface": "#faf9fe",
+                    "on-secondary-fixed": "#0c006a",
+                    "secondary-fixed": "#e2dfff",
+                    "on-tertiary": "#ffffff",
+                    "secondary-container": "#6664e4",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#c1c6d7",
+                    "on-background": "#1a1b1f",
+                    "on-error-container": "#93000a",
+                    "outline": "#717786",
+                    "inverse-surface": "#2f3034",
+                    "primary-container": "#0070eb",
+                    "secondary-fixed-dim": "#c2c1ff",
+                    "on-primary-container": "#fefcff",
+                    "surface-tint": "#005bc1",
+                    "on-surface-variant": "#414755",
+                    "primary-fixed": "#d8e2ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .glass-sheet {
+            backdrop-filter: blur(24px);
+            background: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-200/50 transition-colors rounded-full text-blue-700">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="text-lg font-black tracking-tighter text-blue-700 dark:text-blue-500 uppercase font-['Inter']">PC ARCHITECT</h1>
+</div>
+<div class="h-8 w-8 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="User avatar" data-alt="close-up portrait of a high-tech digital avatar with subtle blue glowing circuit patterns on skin, professional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBec2v7FsRrLd54aIh6YDNZFbEydKXzxG0ieTtU0x_zw1RNzN97BChhDN-4OdzbHtn5Qu1hFC4iuVxi31tIaGHCPIn0Vbo5eiFB_8tAF7i8FrEiXQlfRejGCsntp90P26inws3GJn6kVQd1l5I01sh6OJggI1NanVYtAfC48LtbmvP2opL3I42Tg6aP1mogHiKkUdrikj95H1yE_kkgiseEcby9vMdGxOEEgDn0M97nbrDw0XS3ZuF-dWXORXUZQ4jK6adjEBdqifI"/>
+</div>
+</header>
+<main class="pt-20 px-6 max-w-5xl mx-auto">
+<!-- Sticky Search Bar -->
+<div class="sticky top-16 z-40 py-4 bg-background/95 backdrop-blur-sm">
+<div class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="w-full bg-surface-container-highest border-none rounded-2xl pl-12 pr-4 py-4 text-on-surface placeholder:text-on-surface-variant focus:ring-2 focus:ring-primary/20 transition-all outline-none" placeholder="Search components (e.g. RTX 4080, Ryzen 9)..." type="text"/>
+<div class="absolute inset-y-0 right-4 flex items-center">
+<span class="material-symbols-outlined text-outline">tune</span>
+</div>
+</div>
+</div>
+<!-- Section: Top Picks (AI Recommended) -->
+<section class="mt-8">
+<div class="flex items-end justify-between mb-6">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-[10px] font-bold tracking-widest uppercase mb-2">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">psychology</span>
+                        AI Recommended
+                    </div>
+<h2 class="text-3xl font-extrabold tracking-tight">Top Picks</h2>
+</div>
+<button class="text-primary font-semibold text-sm hover:underline">View analysis</button>
+</div>
+<!-- Bento Grid / Asymmetric Layout for Top Picks -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Highlight Card 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-[24px] shadow-[0_24px_48px_-12px_rgba(26,27,31,0.06)] flex flex-col justify-between min-h-[220px] group transition-all hover:bg-surface-bright">
+<div class="flex justify-between items-start">
+<div class="w-20 h-20 bg-surface-container-low rounded-xl flex items-center justify-center p-2">
+<img alt="GPU" data-alt="professional product photography of a high-end black and silver graphics card with subtle copper heat pipes, studio lighting, white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9oefa2rkUsXeOb4VJgn4gw4rehN1opvuyqe2XCoh1G3A2qoQUqW_yMCo5gfCL-kN2dKTwcSCCurH6PfBc36dYqUwgyxkdjyZ2aQTTgasM2hlunliKcyVILgddJTm7drkCFUSm0KeBwbOeaxEL_A_6SdsTVoDR54wUz96KWzwLhr6AUsXdXszDN8Cg3iYntuELqhZPKHTpq6RhKNGg3GJDK1syrjcT3o5H6Hm3QwynGsJk-fkd3APmaDtP5wxJQYhTLAnl6ifZJ10"/>
+</div>
+<div class="text-right">
+<div class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-bold tracking-tight">Score: 9.8</div>
+<div class="mt-1 text-on-surface-variant text-[10px] font-bold uppercase tracking-wider">Precision Fit</div>
+</div>
+</div>
+<div class="mt-4">
+<p class="text-on-surface-variant text-xs font-bold uppercase tracking-widest">NVIDIA</p>
+<h3 class="text-xl font-bold tracking-tight">GeForce RTX 4090 FE</h3>
+<div class="flex items-center justify-between mt-4">
+<span class="text-2xl font-black text-primary">$1,599.00</span>
+<button class="bg-primary hover:bg-primary-container text-white h-12 w-12 rounded-full flex items-center justify-center transition-transform active:scale-90">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Highlight Card 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-[24px] shadow-[0_24px_48px_-12px_rgba(26,27,31,0.06)] flex flex-col justify-between min-h-[220px] group transition-all hover:bg-surface-bright">
+<div class="flex justify-between items-start">
+<div class="w-20 h-20 bg-surface-container-low rounded-xl flex items-center justify-center p-2">
+<img alt="CPU" data-alt="close-up of a modern computer processor chip with intricate gold contact points and etched branding, macro photography, tech aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy3JGs2lrw2BhgA8NVGZ7AoKMRdS4VeDp7llx_IBI9s8sSf_nE2S5ZHTXDeKSnkRTGWwSb-vmKTOf_3ga4zixROHU7U_JY1HZV8_LR8pNjEVgIB1Biw-X2kd5Rf_NbVIJ2DLxU72zB1tiZCdWysZ72F-UeZ3Xgzn7UQfghJbWLBNBQMPFykYJd7q-DgFjES7objJRLiMOXS-g_AI_vkVtPnBuldNZ9QDyknJXZsPH9M8Fd7I8H72ArVDtUQGrF7F3BwdsMaSCpsy0"/>
+</div>
+<div class="text-right">
+<div class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-bold tracking-tight">Score: 9.5</div>
+<div class="mt-1 text-on-surface-variant text-[10px] font-bold uppercase tracking-wider">High Efficiency</div>
+</div>
+</div>
+<div class="mt-4">
+<p class="text-on-surface-variant text-xs font-bold uppercase tracking-widest">AMD</p>
+<h3 class="text-xl font-bold tracking-tight">Ryzen 9 7950X3D</h3>
+<div class="flex items-center justify-between mt-4">
+<span class="text-2xl font-black text-primary">$699.00</span>
+<button class="bg-primary hover:bg-primary-container text-white h-12 w-12 rounded-full flex items-center justify-center transition-transform active:scale-90">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: All Components -->
+<section class="mt-12">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-2xl font-bold tracking-tight">All Components</h2>
+<div class="flex gap-2">
+<span class="px-4 py-1.5 bg-surface-container-high rounded-full text-xs font-semibold text-on-surface-variant cursor-pointer">Popular</span>
+<span class="px-4 py-1.5 bg-primary text-white rounded-full text-xs font-semibold cursor-pointer">Latest</span>
+<span class="px-4 py-1.5 bg-surface-container-high rounded-full text-xs font-semibold text-on-surface-variant cursor-pointer">Price</span>
+</div>
+</div>
+<!-- List of horizontal compact cards -->
+<div class="space-y-4">
+<!-- Component Item 1 -->
+<div class="flex items-center bg-surface-container-low p-4 rounded-2xl hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="h-16 w-16 bg-surface-container-lowest rounded-xl flex-shrink-0 flex items-center justify-center">
+<img alt="SSD" data-alt="slick m.2 nvme ssd drive with a black heat sink and subtle branding, isolated on a light grey background, technical product shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAacCah4crx5PQUYtlJYnqOObcyet6Uz-V0AsXP5hHW2mSSQj9G4HNMhQmjk8dXFh_qP_U-yjIPH4IjdYOUBIZQjEIdgYc8FhFCuQZi2--w3Wwu8IW-wEjd4cKY9xafOzOJMKphf6_LONFDVBvPueuKN-nH0qX1DAAPC8tQHtFO6M7tnrfUgmPbuDphS5zNVs_9ZJlu-iJggLQWX4Okh7_GJpu2OBJA1nrLERKBfewq4s1cvNk_IH5d7u_XgcemWmouDx8nF0kgWKU"/>
+</div>
+<div class="ml-4 flex-grow">
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-bold tracking-widest uppercase text-outline">Samsung</span>
+<div class="px-1.5 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed text-[8px] font-black rounded uppercase">AI Recommended</div>
+</div>
+<h4 class="font-bold text-on-surface">990 Pro 2TB NVMe SSD</h4>
+<div class="flex items-center gap-4 mt-1">
+<span class="text-sm font-bold text-primary">$179.99</span>
+<div class="flex items-center text-xs text-on-surface-variant font-medium">
+<span class="material-symbols-outlined text-[14px] text-tertiary mr-1" style="font-variation-settings: 'FILL' 1;">star</span>
+                                4.9 (1.2k)
+                            </div>
+</div>
+</div>
+<button class="ml-4 h-10 w-10 flex items-center justify-center bg-surface-container-lowest rounded-full text-on-surface-variant group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<!-- Component Item 2 -->
+<div class="flex items-center bg-surface-container-low p-4 rounded-2xl hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="h-16 w-16 bg-surface-container-lowest rounded-xl flex-shrink-0 flex items-center justify-center">
+<img alt="RAM" data-alt="high-speed ddr5 ram sticks with sleek rgb lighting strip along the top edge, dark grey heat spreaders, professional tech lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTu38y93yg2d83OJ5Pa8oM59ZdWbO476YrTyV1cY2K1taKl5fAn7-P_Cpx-dcECedCNFPuJTgv0OEEnQOpZguCVLdutXyID8fMt2VfgHPmNd1rfnlPdjBRcr2wHHubLgSVS5HsJcNePX-2mL8B0-Pn8iOj-z-IKgAdDatgCQWmPDoZ1ERCvJePZLDmlKw5UEI1IMGe7I_S3mwa82TgjxkBxpJ0hT1fiEvtwJKHlXDbbmRiprCe3vRgHSevcQR8fZ18dUf-S84joBM"/>
+</div>
+<div class="ml-4 flex-grow">
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-bold tracking-widest uppercase text-outline">G.Skill</span>
+</div>
+<h4 class="font-bold text-on-surface">Trident Z5 RGB 32GB DDR5-6000</h4>
+<div class="flex items-center gap-4 mt-1">
+<span class="text-sm font-bold text-primary">$124.99</span>
+<div class="flex items-center text-xs text-on-surface-variant font-medium">
+<span class="material-symbols-outlined text-[14px] text-tertiary mr-1" style="font-variation-settings: 'FILL' 1;">star</span>
+                                4.8 (850)
+                            </div>
+</div>
+</div>
+<button class="ml-4 h-10 w-10 flex items-center justify-center bg-surface-container-lowest rounded-full text-on-surface-variant group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<!-- Component Item 3 -->
+<div class="flex items-center bg-surface-container-low p-4 rounded-2xl hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="h-16 w-16 bg-surface-container-lowest rounded-xl flex-shrink-0 flex items-center justify-center">
+<img alt="Cooler" data-alt="premium liquid cpu cooler with three fans on a large radiator, sleek black design with customizable circular lcd screen on pump head" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ4OxYSFRserVFhGjIhU_YDaMvq-XPbHIx3ZLkMgs7qsxTBgIbtPWi1NujjusLpLGCIipMqSE02aPsfpmKFCQvcmb042-3lfZoxFGjD05LG0-4xv-6VIZ2mluEVhbJoaaGAprTX31zagUQwqeJx6_rKm4A3PEwkODw3KcmZunVpG1iIZeU2l-od90bOorgIoejZGgo7A-o1K9pGOQ-HEFmLUaHX9ForudmvyZ9lostfzJUdrr2CNONNpbeT1ZUqcD9pyOQrveBsls"/>
+</div>
+<div class="ml-4 flex-grow">
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-bold tracking-widest uppercase text-outline">NZXT</span>
+</div>
+<h4 class="font-bold text-on-surface">Kraken Elite 360 RGB</h4>
+<div class="flex items-center gap-4 mt-1">
+<span class="text-sm font-bold text-primary">$279.99</span>
+<div class="flex items-center text-xs text-on-surface-variant font-medium">
+<span class="material-symbols-outlined text-[14px] text-tertiary mr-1" style="font-variation-settings: 'FILL' 1;">star</span>
+                                4.7 (420)
+                            </div>
+</div>
+</div>
+<button class="ml-4 h-10 w-10 flex items-center justify-center bg-surface-container-lowest rounded-full text-on-surface-variant group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Component Details Bottom Sheet (Active State Mockup) -->
+<div class="fixed inset-0 bg-on-surface/20 z-[60] flex items-end">
+<div class="glass-sheet w-full max-h-[751px] rounded-t-[40px] p-8 shadow-2xl relative">
+<div class="w-12 h-1.5 bg-outline-variant/30 rounded-full mx-auto mb-8"></div>
+<div class="flex flex-col md:flex-row gap-8">
+<div class="md:w-1/3 aspect-square bg-surface-container-lowest rounded-[32px] p-6 shadow-sm flex items-center justify-center">
+<img alt="GPU Details" data-alt="detailed macro shot of the cooling fans and metallic shroud of a premium graphics card, depth of field, high-tech industrial aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp7HySEpp0idXYgkiotLkMH0ivY6-AgJ6wV31twZJ42dwq3TTdTwIDRMe1sKaZa8FciPymOlWECdR2vk-EXAXnrSavSl6Y2nkZN96FXyKBXHCwleEWmmCyOEBfWNIDmh2wo1gxPIzMl4xFGhO_fBSB4sNki4R6UIgC-Pqtor8vJ2RWNL-buyuoWl7KSl2Fvp9I2iz4MhUTOMZ7_pHAzcKfe2KLFPxMXsBgoE2E0u6ngT7DAe0hw9YdYfVZc2WcsV_CRAHxojt0SQQ"/>
+</div>
+<div class="md:w-2/3">
+<div class="flex items-center gap-3 mb-2">
+<span class="text-xs font-black tracking-[0.2em] uppercase text-on-surface-variant">Architecture</span>
+<div class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold rounded-full uppercase tracking-wider">AI Recommended</div>
+</div>
+<h2 class="text-4xl font-black tracking-tighter mb-4">GeForce RTX 4090 FE</h2>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-6">
+                        The ultimate GeForce GPU. It brings an enormous leap in performance, efficiency, and AI-powered graphics. Experience ultra-high performance gaming, incredibly detailed virtual worlds with ray tracing, unprecedented productivity, and new ways to create.
+                    </p>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+<div class="bg-white/40 p-4 rounded-2xl">
+<p class="text-[10px] font-bold uppercase tracking-widest text-outline mb-1">VRAM</p>
+<p class="text-lg font-black text-on-surface">24GB GDDR6X</p>
+</div>
+<div class="bg-white/40 p-4 rounded-2xl">
+<p class="text-[10px] font-bold uppercase tracking-widest text-outline mb-1">TDP</p>
+<p class="text-lg font-black text-on-surface">450W</p>
+</div>
+<div class="bg-white/40 p-4 rounded-2xl">
+<p class="text-[10px] font-bold uppercase tracking-widest text-outline mb-1">Length</p>
+<p class="text-lg font-black text-on-surface">304mm</p>
+</div>
+<div class="bg-white/40 p-4 rounded-2xl">
+<p class="text-[10px] font-bold uppercase tracking-widest text-outline mb-1">Cores</p>
+<p class="text-lg font-black text-on-surface">16384</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex-grow bg-primary text-white py-5 rounded-full font-bold text-lg shadow-lg shadow-primary/20 active:scale-95 transition-all">Add to Build - $1,599</button>
+<button class="h-16 w-16 flex items-center justify-center bg-surface-container-high rounded-full text-on-surface">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full rounded-t-[24px] z-50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-2xl border-t border-slate-200/20 dark:border-slate-800/20 shadow-[0_-8px_30px_rgb(0,0,0,0.04)] flex justify-around items-center h-20 px-4 pb-2">
+<div class="flex flex-col items-center justify-center bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-2xl px-5 py-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">architecture</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">Build</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-600 transition-colors">
+<span class="material-symbols-outlined">speed</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">Benchmark</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-600 transition-colors">
+<span class="material-symbols-outlined">psychology</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">AI Chat</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-600 transition-colors">
+<span class="material-symbols-outlined">compare_arrows</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">Compare</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-600 transition-colors">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">Profile</span>
+</div>
+</nav>
+</body></html>

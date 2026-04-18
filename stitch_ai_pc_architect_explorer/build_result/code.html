@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PC ARCHITECT - Build Result</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#adc6ff",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e3e2e7",
+                    "surface-container": "#eeedf3",
+                    "on-primary-fixed-variant": "#004493",
+                    "surface-dim": "#dad9df",
+                    "tertiary": "#9e3d00",
+                    "tertiary-fixed": "#ffdbcc",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-container": "#fffbff",
+                    "primary-fixed-dim": "#adc6ff",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#3631b4",
+                    "surface-container-high": "#e9e7ed",
+                    "background": "#faf9fe",
+                    "primary": "#0058bc",
+                    "on-tertiary-fixed": "#351000",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#f1f0f5",
+                    "surface-container-low": "#f4f3f8",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#c64f00",
+                    "secondary": "#4c4aca",
+                    "surface-container-highest": "#e3e2e7",
+                    "on-tertiary-fixed-variant": "#7c2e00",
+                    "surface-bright": "#faf9fe",
+                    "on-primary-fixed": "#001a41",
+                    "on-surface": "#1a1b1f",
+                    "tertiary-fixed-dim": "#ffb595",
+                    "on-secondary-container": "#fffbff",
+                    "surface": "#faf9fe",
+                    "on-secondary-fixed": "#0c006a",
+                    "secondary-fixed": "#e2dfff",
+                    "on-tertiary": "#ffffff",
+                    "secondary-container": "#6664e4",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#c1c6d7",
+                    "on-background": "#1a1b1f",
+                    "on-error-container": "#93000a",
+                    "outline": "#717786",
+                    "inverse-surface": "#2f3034",
+                    "primary-container": "#0070eb",
+                    "secondary-fixed-dim": "#c2c1ff",
+                    "on-primary-container": "#fefcff",
+                    "surface-tint": "#005bc1",
+                    "on-surface-variant": "#414755",
+                    "primary-fixed": "#d8e2ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-blue-700 hover:bg-slate-200/50 transition-colors p-2 rounded-full Active: scale-95 duration-150">menu</button>
+<h1 class="text-lg font-black tracking-tighter text-blue-700 dark:text-blue-500 uppercase font-['Inter']">PC ARCHITECT</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden bg-slate-200 flex items-center justify-center border-2 border-white">
+<img alt="User profile avatar" data-alt="close-up portrait of a professional hardware reviewer in a modern tech studio setting with soft blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgQGj6_9mSXRhFSa-FAQwZ2W2FyqQqes2_QSOx0-IyhE2IcUEpDWHSR21srfxa1RBNQsIVMw3kftEypO3bP-dpxet8xMtSBwTG9Osm0Vl5n4ZkLJehBq5uACbpiFE4mjoi86h1LaZJoTTyfvtaW6ERtMDMZ7UasV1GPQfwC5uVgBF74Vmy165ak1nc7khAKDO3fB2iGwviIZitURm7tN33oJiMfH3zNoKsp59_rXxwOzbpEhvpalMo2QWg-DZiWT0SEWw8sR0NxSA"/>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-7xl mx-auto">
+<!-- Hero Section: Budget vs Total -->
+<section class="mb-12">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Main Budget Card -->
+<div class="md:col-span-2 bg-surface-container-low rounded-[2rem] p-8 flex flex-col justify-between overflow-hidden relative">
+<div class="relative z-10">
+<span class="text-xs font-bold tracking-[0.1em] uppercase text-on-surface-variant mb-2 block">System Configuration Summary</span>
+<h2 class="text-4xl font-extrabold tracking-tight mb-8">Ultimate 4K Rig</h2>
+<div class="flex flex-col md:flex-row gap-12 md:items-end">
+<div>
+<p class="text-sm font-medium text-on-surface-variant mb-1">Total Build Cost</p>
+<p class="text-6xl font-black tracking-tighter text-primary">$3,429.00</p>
+</div>
+<div class="flex-1">
+<div class="flex justify-between text-xs font-bold uppercase mb-2">
+<span>Budget Utilization</span>
+<span class="text-primary">98% of $3,500</span>
+</div>
+<div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[98%]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Aesthetic Background Image for Context -->
+<div class="absolute -right-20 -bottom-20 opacity-10 w-96 h-96">
+<span class="material-symbols-outlined text-[15rem]">architecture</span>
+</div>
+</div>
+<!-- Benchmarks / Performance Card -->
+<div class="bg-surface-container-highest rounded-[2rem] p-8 flex flex-col">
+<span class="text-xs font-bold tracking-[0.1em] uppercase text-on-surface-variant mb-4 block">Performance Projection</span>
+<div class="space-y-6 flex-1 flex flex-col justify-center">
+<div class="flex items-center justify-between">
+<span class="font-bold text-sm">4K ULTRA</span>
+<span class="px-4 py-2 bg-primary text-on-primary rounded-full font-black tracking-tighter text-xl">144 FPS</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-bold text-sm">1440P EXTREME</span>
+<span class="px-4 py-2 bg-secondary text-on-secondary rounded-full font-black tracking-tighter text-xl">285 FPS</span>
+</div>
+<div class="pt-4 border-t border-outline-variant/20">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">speed</span>
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Architecture Score</span>
+</div>
+<p class="text-3xl font-black text-on-surface tracking-tighter">9.8/10</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- AI Analysis Expandable Card -->
+<section class="mb-12">
+<div class="bg-tertiary-fixed rounded-[2rem] p-8 relative overflow-hidden group">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary flex items-center justify-center text-on-tertiary">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-on-tertiary-fixed">AI Architect Analysis</h3>
+<p class="text-sm text-on-tertiary-fixed-variant">Optimization verified for high-thermal workloads</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-tertiary-fixed-variant">expand_more</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-4">
+<p class="text-sm leading-relaxed text-on-tertiary-fixed-variant">
+                            This build leverages a highly efficient <strong>thermal-to-power ratio</strong>. The selected CPU and GPU combo minimizes bottlenecking to less than 2% at 4K resolution. Memory latency is optimized for the latest DDR5 platform.
+                        </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-white/40 rounded-full text-[10px] font-bold uppercase tracking-wider text-on-tertiary-fixed">No Bottleneck</span>
+<span class="px-3 py-1 bg-white/40 rounded-full text-[10px] font-bold uppercase tracking-wider text-on-tertiary-fixed">Future Proof</span>
+<span class="px-3 py-1 bg-white/40 rounded-full text-[10px] font-bold uppercase tracking-wider text-on-tertiary-fixed">Peak Efficiency</span>
+</div>
+</div>
+<div class="bg-white/20 backdrop-blur-md rounded-2xl p-6 border border-white/30">
+<h4 class="text-xs font-black uppercase mb-4 text-on-tertiary-fixed">Key Strengths</h4>
+<ul class="space-y-3">
+<li class="flex items-start gap-2 text-sm text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-xs mt-1">check_circle</span>
+                                Optimized for Ray Tracing workflows
+                            </li>
+<li class="flex items-start gap-2 text-sm text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-xs mt-1">check_circle</span>
+                                High-bandwidth storage prevents stutter
+                            </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Components List -->
+<section class="mb-16">
+<div class="flex items-end justify-between mb-8">
+<h3 class="text-2xl font-black tracking-tight">Component Breakdown</h3>
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">8 Parts Selected</span>
+</div>
+<div class="space-y-4">
+<!-- Component Card: GPU -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 flex flex-col md:flex-row items-center gap-6 group hover:bg-surface-bright transition-all duration-300">
+<div class="w-32 h-32 bg-surface-container-low rounded-2xl flex-shrink-0 p-4">
+<img alt="GeForce RTX 4090" class="w-full h-full object-contain" data-alt="A high-end graphics card with triple-fan design and subtle RGB lighting, studio-shot on a matte dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRcn2RExwKV-JcYziQHziZIUUfXQXXs7X-cQYJFomww7ccQ5MfF_8AHMULfjspz5HHaXtqUsD5HucIHlr27pxHuJaX_bEffWjzUk7mKaUo_4Xsq53Db05DFxB0hzOr3LPg5e1ntTVpxBJfrxWmmXZg-1gD5BSeqFpIm9RxUZD2QA5jHSdEUmvcuPUlZqbDbDcFTkDYGQoc0IdoNCnvenhrwJHOpcJEkWQBtTME47fSEjz8NeoGd-SFrd6W_XrZ-1fkX5xxVnMpSOU"/>
+</div>
+<div class="flex-1 text-center md:text-left">
+<div class="flex flex-col md:flex-row md:items-center gap-2 mb-1">
+<span class="text-[10px] font-black uppercase tracking-widest text-primary">Graphics Card</span>
+<h4 class="text-xl font-extrabold tracking-tight">NVIDIA GeForce RTX 4090 24GB</h4>
+</div>
+<div class="flex flex-wrap justify-center md:justify-start gap-4 mt-2">
+<div class="flex flex-col">
+<span class="text-[10px] font-bold uppercase text-on-surface-variant">VRAM</span>
+<span class="text-sm font-bold">24GB GDDR6X</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] font-bold uppercase text-on-surface-variant">Boost Clock</span>
+<span class="text-sm font-bold">2.52 GHz</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-3">
+<span class="text-2xl font-black tracking-tighter">$1,699.99</span>
+<button class="px-8 py-3 bg-on-surface text-surface rounded-full text-xs font-black uppercase tracking-widest hover:bg-primary transition-colors">Buy Now</button>
+</div>
+</div>
+<!-- Component Card: CPU -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 flex flex-col md:flex-row items-center gap-6 group hover:bg-surface-bright transition-all duration-300">
+<div class="w-32 h-32 bg-surface-container-low rounded-2xl flex-shrink-0 p-4">
+<img alt="Intel Core i9-14900K" class="w-full h-full object-contain" data-alt="Close-up of a modern CPU chip with intricate gold contact pins and reflective metallic heat spreader" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH93HoKqo1jmvcl4oFDyqd1Gz41MBY2bI9jchdm6-tjCJxmu021riAAtOjRaOM80rdww-mx5W5lgcU-C6Vf-eBdOwo87ZmFQ5AIFyIys8lEvHrBrdkuTKX3EIqd1JP1He2a8tUNORT-k8uTUDMk_UNaeJiNn5Gv2Kbm84gz5EE6qi5ZwwyGdVS5UWHA8WHupzbfjn3F8J2DbHHrP_N5va9q21azOTjUmcpA8t1-4cECoevsRt0PaCgFItY95Bo2tbhfKn3_auIXyQ"/>
+</div>
+<div class="flex-1 text-center md:text-left">
+<div class="flex flex-col md:flex-row md:items-center gap-2 mb-1">
+<span class="text-[10px] font-black uppercase tracking-widest text-primary">Processor</span>
+<h4 class="text-xl font-extrabold tracking-tight">Intel Core i9-14900K</h4>
+</div>
+<div class="flex flex-wrap justify-center md:justify-start gap-4 mt-2">
+<div class="flex flex-col">
+<span class="text-[10px] font-bold uppercase text-on-surface-variant">Cores</span>
+<span class="text-sm font-bold">24 (8P + 16E)</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] font-bold uppercase text-on-surface-variant">Max Turbo</span>
+<span class="text-sm font-bold">6.0 GHz</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-3">
+<span class="text-2xl font-black tracking-tighter">$589.00</span>
+<button class="px-8 py-3 bg-on-surface text-surface rounded-full text-xs font-black uppercase tracking-widest hover:bg-primary transition-colors">Buy Now</button>
+</div>
+</div>
+<!-- Component Card: RAM -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 flex flex-col md:flex-row items-center gap-6 group hover:bg-surface-bright transition-all duration-300">
+<div class="w-32 h-32 bg-surface-container-low rounded-2xl flex-shrink-0 p-4">
+<img alt="64GB DDR5 Memory" class="w-full h-full object-contain" data-alt="high-speed DDR5 RAM sticks with premium black heatspreaders and minimalist white LED accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvUJ81q_4bya76fCT_t6kpqGWH9n5zGtJktjjG5MDCRh8UxeH1Hs59QMRRSLmeyGN9UprByuZso348Bj3lRMuYQAm93Hr6KUBUuDIHDhif151iIzIopwO52H0DHxNexkTJzq3Uh3AFbpY4XSzCgGLPJ8Grkisafw8dXITN5asXC36HxPWQBV8FLHgCm8PzyXprEGRhsOsdpdOOA9zrJ-w8XAYXgX-PUTCbF75jt4wyanH1UheJu9GDC4-W5UBidCP7Ke5uXJSRIXM"/>
+</div>
+<div class="flex-1 text-center md:text-left">
+<div class="flex flex-col md:flex-row md:items-center gap-2 mb-1">
+<span class="text-[10px] font-black uppercase tracking-widest text-primary">Memory</span>
+<h4 class="text-xl font-extrabold tracking-tight">G.Skill Trident Z5 RGB 64GB</h4>
+</div>
+<div class="flex flex-wrap justify-center md:justify-start gap-4 mt-2">
+<div class="flex flex-col">
+<span class="text-[10px] font-bold uppercase text-on-surface-variant">Speed</span>
+<span class="text-sm font-bold">6400 MT/s</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] font-bold uppercase text-on-surface-variant">Lat</span>
+<span class="text-sm font-bold">CL32-39-39</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-3">
+<span class="text-2xl font-black tracking-tighter">$214.99</span>
+<button class="px-8 py-3 bg-on-surface text-surface rounded-full text-xs font-black uppercase tracking-widest hover:bg-primary transition-colors">Buy Now</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full rounded-t-[24px] z-50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-2xl border-t border-slate-200/20 dark:border-slate-800/20 shadow-[0_-8px_30px_rgb(0,0,0,0.04)] flex justify-around items-center h-20 px-4 pb-2">
+<a class="flex flex-col items-center justify-center bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-2xl px-5 py-2 transform scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">architecture</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">Build</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-600 dark:hover:text-blue-300" href="#">
+<span class="material-symbols-outlined">speed</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">Benchmark</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-600 dark:hover:text-blue-300" href="#">
+<span class="material-symbols-outlined">psychology</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">AI Chat</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-600 dark:hover:text-blue-300" href="#">
+<span class="material-symbols-outlined">compare_arrows</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">Compare</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-600 dark:hover:text-blue-300" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">Profile</span>
+</a>
+</nav>
+<!-- Navigation Drawer (Off-screen by default) -->
+<aside class="hidden fixed left-0 top-0 h-full w-80 rounded-r-3xl bg-slate-50 dark:bg-slate-950 shadow-2xl z-[60] flex-col p-6 space-y-4 divide-y divide-slate-100 dark:divide-slate-900">
+<div class="flex items-center gap-4 py-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-slate-200">
+<img alt="User avatar" data-alt="professional user avatar icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGqEu2kMOC80YAzXNdCv3ggZ4LjewDErlUzkX8W1-hz_b5BYrQF_9Hd5oBmyBGrOZ75FcUy-AW5U4sQqoBH03TFGeaUzZd33vWFd52W7SoXpMUjwKUWjcSnQ9mB2MBBaDaFNqmf8oUh3Ehxm95lupY1E658G9aYMO-pLrQVfLc9yFv-naFEBPBtEXk1qRqzCr3m9o4PUKuu2acOQoSfFAOb33UnFKnPzEb1JX6mvTSC0GYpi7Xk60ILnOx9d5Qf8Yp6HHcqi0kCoc"/>
+</div>
+<div>
+<h4 class="text-blue-700 dark:text-blue-400 font-bold font-['Inter'] text-sm">Hardware Enthusiast</h4>
+<p class="text-xs text-slate-500">Level 4 Architect</p>
+<p class="text-[10px] text-primary uppercase font-bold tracking-widest mt-1">Premium Member</p>
+</div>
+</div>
+<nav class="py-4 space-y-2">
+<a class="flex items-center gap-4 p-3 rounded-xl bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 font-bold text-sm hover:pl-6 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span>My Inventory</span>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-xl text-slate-600 dark:text-slate-400 text-sm hover:pl-6 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">save</span>
+<span>Saved Builds</span>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-xl text-slate-600 dark:text-slate-400 text-sm hover:pl-6 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-xl text-slate-600 dark:text-slate-400 text-sm hover:pl-6 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">contact_support</span>
+<span>Support</span>
+</a>
+</nav>
+</aside>
+</body></html>

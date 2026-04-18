@@ -1,0 +1,26 @@
+# ─── Android ───────────────────────────────────────────────────────────────────
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+*.apk
+*.aab
+*.ap_
+
+# ─── Keys & Secrets ────────────────────────────────────────────────────────────
+*.jks
+*.keystore
+keystore.properties
+release-keystore.jks
+
+# ─── Firebase (keep google-services.json in VCS but not credentials) ───────────
+# google-services.json  ← keep tracked
+
+# ─── OS ────────────────────────────────────────────────────────────────────────
+Thumbs.db
+Desktop.ini

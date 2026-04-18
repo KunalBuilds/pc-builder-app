@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Architect Chat</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#adc6ff",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e3e2e7",
+                    "surface-container": "#eeedf3",
+                    "on-primary-fixed-variant": "#004493",
+                    "surface-dim": "#dad9df",
+                    "tertiary": "#9e3d00",
+                    "tertiary-fixed": "#ffdbcc",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-container": "#fffbff",
+                    "primary-fixed-dim": "#adc6ff",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#3631b4",
+                    "surface-container-high": "#e9e7ed",
+                    "background": "#faf9fe",
+                    "primary": "#0058bc",
+                    "on-tertiary-fixed": "#351000",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#f1f0f5",
+                    "surface-container-low": "#f4f3f8",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#c64f00",
+                    "secondary": "#4c4aca",
+                    "surface-container-highest": "#e3e2e7",
+                    "on-tertiary-fixed-variant": "#7c2e00",
+                    "surface-bright": "#faf9fe",
+                    "on-primary-fixed": "#001a41",
+                    "on-surface": "#1a1b1f",
+                    "tertiary-fixed-dim": "#ffb595",
+                    "on-secondary-container": "#fffbff",
+                    "surface": "#faf9fe",
+                    "on-secondary-fixed": "#0c006a",
+                    "secondary-fixed": "#e2dfff",
+                    "on-tertiary": "#ffffff",
+                    "secondary-container": "#6664e4",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#c1c6d7",
+                    "on-background": "#1a1b1f",
+                    "on-error-container": "#93000a",
+                    "outline": "#717786",
+                    "inverse-surface": "#2f3034",
+                    "primary-container": "#0070eb",
+                    "secondary-fixed-dim": "#c2c1ff",
+                    "on-primary-container": "#fefcff",
+                    "surface-tint": "#005bc1",
+                    "on-surface-variant": "#414755",
+                    "primary-fixed": "#d8e2ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="text-blue-700 dark:text-blue-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 p-2 rounded-full transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="text-lg font-black tracking-tighter text-blue-700 dark:text-blue-500 uppercase font-['Inter']">PC ARCHITECT</h1>
+</div>
+<div class="flex items-center gap-3">
+<div class="hidden md:flex gap-6 mr-6">
+<span class="text-blue-700 dark:text-blue-400 font-['Inter'] tracking-tight font-semibold cursor-pointer">AI Chat</span>
+<span class="text-slate-500 dark:text-slate-400 font-['Inter'] tracking-tight font-semibold cursor-pointer hover:text-blue-700 transition-colors">Compare</span>
+<span class="text-slate-500 dark:text-slate-400 font-['Inter'] tracking-tight font-semibold cursor-pointer hover:text-blue-700 transition-colors">Benchmark</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden ring-2 ring-primary/10">
+<img class="w-full h-full object-cover" data-alt="professional portrait of a tech enthusiast with short hair and glasses, studio lighting, clean background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgFKVtreJYv5NEG6cufFzDlno8VkA4gYzXPkKksPYSL8Cl77YqAn0fVa8rhev1oiO5Ha0UmVeaNX_1Rpg7xGKpb3TezGaXXXulouWnHrAJb0sX4c-QHjbCSnObF_EvPWtr9YM1dkx2m-vN6V6i7nX25vMSLoawyp2PcuSxB79_nfTsy2_TA_iVJT2jjCTYYMhlUYEBwWmr6dBko67O2SdwzaEny49YLZXdHhIlIna2kFuRhoCW8lZuRQiQmALspj7mCrtqoqTmhGI"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-20 pb-40 min-h-screen max-w-4xl mx-auto px-4">
+<!-- Chat History Container -->
+<div class="flex flex-col space-y-8">
+<!-- System/AI Message -->
+<div class="flex items-end gap-3 max-w-[85%] group">
+<div class="w-8 h-8 rounded-full bg-tertiary-container flex items-center justify-center shrink-0 mb-1">
+<span class="material-symbols-outlined text-on-tertiary-container text-sm">psychology</span>
+</div>
+<div class="bg-surface-container-low p-5 rounded-2xl rounded-bl-none text-on-surface leading-relaxed shadow-sm">
+<p class="text-sm font-medium text-tertiary mb-1">Architect AI</p>
+<p class="text-md">Welcome back, Architect. I've analyzed the latest hardware benchmarks. Are you looking to optimize your current workstation or starting a fresh high-performance build?</p>
+</div>
+</div>
+<!-- User Message -->
+<div class="flex flex-col items-end gap-2 max-w-[85%] ml-auto">
+<div class="bg-primary text-on-primary p-5 rounded-2xl rounded-br-none shadow-lg">
+<p class="text-md">I need a GPU recommendation for 4K video editing and some light gaming. Budget is around $800.</p>
+</div>
+<span class="text-[10px] font-bold tracking-widest uppercase text-outline px-2">Delivered</span>
+</div>
+<!-- AI Response with Hardware Detail -->
+<div class="flex items-start gap-3 max-w-[90%]">
+<div class="w-8 h-8 rounded-full bg-tertiary-container flex items-center justify-center shrink-0 mt-1">
+<span class="material-symbols-outlined text-on-tertiary-container text-sm">psychology</span>
+</div>
+<div class="flex flex-col gap-4 w-full">
+<div class="bg-surface-container-low p-5 rounded-2xl rounded-tl-none text-on-surface shadow-sm">
+<p class="text-md leading-relaxed">For professional video editing, VRAM and CUDA core counts are paramount. Based on your $800 budget, the **RTX 4070 Ti Super** is your optimal choice. It offers 16GB of VRAM which is the sweet spot for 4K timelines.</p>
+</div>
+<!-- Hardware Card (Asymmetric Layout) -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm border border-outline-variant/15 flex flex-col md:flex-row">
+<div class="md:w-1/3 h-48 md:h-auto overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="high-end modern graphics card with metallic finish and triple fans, dark moody studio lighting with blue accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBanTZLPjdurWsr7rybttdzI_l5q_vTeytmu81cSZi6h08-47cmOqG0I4Vgo5C5QaW_HSICYkbXjKkvReBbcHOlyuegrmsCrbAqR4HvnmvxacbEKTQfPxmIW9IqEvt-JuR9Ve1XxKt9QNCeH2RyWhnHYzcDj8x3CNa3dj8ZpAeB1oiFibjGT3FWd992CIb-sAR_lO7HgS1wv7YzRdrlH_xv3kfInscsO5qXRNvx0QJBaFg2gIVW69xVMF-0gFYQlg0VFgGgTIBG2GM"/>
+</div>
+<div class="p-6 md:w-2/3">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">AI Recommended</span>
+<h3 class="text-xl font-bold mt-2">RTX 4070 Ti Super</h3>
+<p class="text-on-surface-variant text-sm">16GB GDDR6X • 8448 CUDA Cores</p>
+</div>
+<div class="text-right">
+<span class="text-2xl font-black text-primary tracking-tight">$799</span>
+<p class="text-[10px] text-outline uppercase font-bold">MSRP</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 py-4 border-t border-surface-container">
+<div>
+<p class="text-[10px] text-outline uppercase font-bold tracking-widest">Perf. Score</p>
+<p class="text-lg font-bold">94/100</p>
+</div>
+<div>
+<p class="text-[10px] text-outline uppercase font-bold tracking-widest">Efficiency</p>
+<p class="text-lg font-bold">285W TDP</p>
+</div>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container font-bold py-3 rounded-xl transition-all active:scale-95">View Full Specs</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Typing Animation -->
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-tertiary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-tertiary-container text-sm">psychology</span>
+</div>
+<div class="bg-surface-container-low px-4 py-3 rounded-2xl flex gap-1.5 items-center">
+<div class="w-1.5 h-1.5 bg-outline rounded-full animate-bounce"></div>
+<div class="w-1.5 h-1.5 bg-outline rounded-full animate-bounce [animation-delay:0.2s]"></div>
+<div class="w-1.5 h-1.5 bg-outline rounded-full animate-bounce [animation-delay:0.4s]"></div>
+</div>
+</div>
+</div>
+</main>
+<!-- Suggestion Chips & Input Area -->
+<div class="fixed bottom-0 w-full z-40">
+<!-- Suggestion Chips -->
+<div class="max-w-4xl mx-auto px-4 mb-4 flex gap-2 overflow-x-auto hide-scrollbar">
+<button class="bg-surface-container-highest/80 backdrop-blur-md px-5 py-2.5 rounded-full text-xs font-bold whitespace-nowrap text-on-surface hover:bg-primary/10 transition-colors border border-outline-variant/10">Compare CPUs</button>
+<button class="bg-surface-container-highest/80 backdrop-blur-md px-5 py-2.5 rounded-full text-xs font-bold whitespace-nowrap text-on-surface hover:bg-primary/10 transition-colors border border-outline-variant/10">Recommend a GPU</button>
+<button class="bg-surface-container-highest/80 backdrop-blur-md px-5 py-2.5 rounded-full text-xs font-bold whitespace-nowrap text-on-surface hover:bg-primary/10 transition-colors border border-outline-variant/10">Power Supply Check</button>
+<button class="bg-surface-container-highest/80 backdrop-blur-md px-5 py-2.5 rounded-full text-xs font-bold whitespace-nowrap text-on-surface hover:bg-primary/10 transition-colors border border-outline-variant/10">Bottleneck Test</button>
+</div>
+<!-- Input Bar -->
+<div class="bg-white/70 dark:bg-slate-900/70 backdrop-blur-2xl rounded-t-[24px] shadow-[0_-8px_30px_rgb(0,0,0,0.04)] border-t border-slate-200/20 px-6 pt-4 pb-8">
+<div class="max-w-4xl mx-auto flex items-center gap-3">
+<button class="w-12 h-12 flex items-center justify-center text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined">attach_file</span>
+</button>
+<div class="flex-1 relative">
+<input class="w-full bg-surface-container-low border-none rounded-2xl px-6 py-4 text-on-surface focus:ring-2 focus:ring-primary/20 placeholder:text-outline/60" placeholder="Ask your hardware architect..." type="text"/>
+</div>
+<button class="w-12 h-12 flex items-center justify-center bg-primary text-on-primary rounded-2xl shadow-lg shadow-primary/20 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-2xl rounded-t-[24px] border-t border-slate-200/20 shadow-[0_-8px_30px_rgb(0,0,0,0.04)] flex justify-around items-center h-20 px-4 pb-2">
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-600">
+<span class="material-symbols-outlined">architecture</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">Build</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-600">
+<span class="material-symbols-outlined">speed</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">Benchmark</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-2xl px-5 py-2 transform scale-90 transition-transform">
+<span class="material-symbols-outlined">psychology</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">AI Chat</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-600">
+<span class="material-symbols-outlined">compare_arrows</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">Compare</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-600">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">Profile</span>
+</div>
+</nav>
+</body></html>

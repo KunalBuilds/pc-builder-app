@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#adc6ff",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e3e2e7",
+                    "surface-container": "#eeedf3",
+                    "on-primary-fixed-variant": "#004493",
+                    "surface-dim": "#dad9df",
+                    "tertiary": "#9e3d00",
+                    "tertiary-fixed": "#ffdbcc",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-container": "#fffbff",
+                    "primary-fixed-dim": "#adc6ff",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#3631b4",
+                    "surface-container-high": "#e9e7ed",
+                    "background": "#faf9fe",
+                    "primary": "#0058bc",
+                    "on-tertiary-fixed": "#351000",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#f1f0f5",
+                    "surface-container-low": "#f4f3f8",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#c64f00",
+                    "secondary": "#4c4aca",
+                    "surface-container-highest": "#e3e2e7",
+                    "on-tertiary-fixed-variant": "#7c2e00",
+                    "surface-bright": "#faf9fe",
+                    "on-primary-fixed": "#001a41",
+                    "on-surface": "#1a1b1f",
+                    "tertiary-fixed-dim": "#ffb595",
+                    "on-secondary-container": "#fffbff",
+                    "surface": "#faf9fe",
+                    "on-secondary-fixed": "#0c006a",
+                    "secondary-fixed": "#e2dfff",
+                    "on-tertiary": "#ffffff",
+                    "secondary-container": "#6664e4",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#c1c6d7",
+                    "on-background": "#1a1b1f",
+                    "on-error-container": "#93000a",
+                    "outline": "#717786",
+                    "inverse-surface": "#2f3034",
+                    "primary-container": "#0070eb",
+                    "secondary-fixed-dim": "#c2c1ff",
+                    "on-primary-container": "#fefcff",
+                    "surface-tint": "#005bc1",
+                    "on-surface-variant": "#414755",
+                    "primary-fixed": "#d8e2ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-200/50 transition-colors rounded-full active:scale-95 duration-150">
+<span class="material-symbols-outlined text-blue-700" data-icon="menu">menu</span>
+</button>
+<h1 class="text-lg font-black tracking-tighter text-blue-700 uppercase">PC ARCHITECT</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="Modern close-up portrait of a tech professional with clean lighting and a minimalist studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn5N-Cm0PFjQjJ4XG_sw2yqPzxIyd-tH5EjweyATFzLUpy75ARx85BwC6TtRG-XIObyyhpC_mBmo8JJkEAt3A0YSEgcH1pGvkus8JgV4kz77iMl8rHPGoZOud4-5X06ijcSXxGpAGdonb5WG2O0sbExn1ky-ws3nqb3HD8gIlMMDyDicg4v4ZELbXWdWDbFf5iW9JsLlqORgbOp2xgdAVBivPK3xxEhnFusMtayTWaiQr5kW5J2EynOM4xCVCsRGvAOs5v8nmVtgQ"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
+<!-- Hero Section: Input Phase -->
+<section class="mb-16">
+<div class="flex flex-col md:flex-row gap-12 items-start">
+<div class="flex-1 w-full">
+<h2 class="text-4xl font-extrabold tracking-tight mb-4">Benchmark Your Rig</h2>
+<p class="text-on-surface-variant mb-8 max-w-md">Input your specifications for a precise performance projection. Our neural engine calculates bottleneck probabilities and frame-rate targets.</p>
+<div class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="text-[10px] font-bold tracking-widest uppercase text-outline pl-4">Graphics Card</label>
+<input class="w-full bg-surface-container-highest border-none rounded-xl py-4 px-6 focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline transition-all" placeholder="e.g. RTX 4080 Super" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold tracking-widest uppercase text-outline pl-4">Processor</label>
+<input class="w-full bg-surface-container-highest border-none rounded-xl py-4 px-6 focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline transition-all" placeholder="e.g. Ryzen 7 7800X3D" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="text-[10px] font-bold tracking-widest uppercase text-outline pl-4">Memory (RAM)</label>
+<input class="w-full bg-surface-container-highest border-none rounded-xl py-4 px-6 focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline transition-all" placeholder="e.g. 32GB DDR5 6000MT/s" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold tracking-widest uppercase text-outline pl-4">Primary Storage</label>
+<input class="w-full bg-surface-container-highest border-none rounded-xl py-4 px-6 focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline transition-all" placeholder="e.g. NVMe PCIe 4.0" type="text"/>
+</div>
+</div>
+<!-- AI Action Button -->
+<button class="w-full mt-4 bg-tertiary-container hover:brightness-110 text-on-tertiary-container py-6 rounded-full font-bold flex items-center justify-center gap-3 transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+                            Analyze with AI
+                        </button>
+</div>
+</div>
+<!-- Visual Accent Image -->
+<div class="w-full md:w-1/3 aspect-[4/5] rounded-[2rem] overflow-hidden bg-surface-container-low hidden md:block">
+<img alt="High-end hardware" class="w-full h-full object-cover" data-alt="Interior of a high-end liquid-cooled PC with blue and purple LED lighting reflecting on chrome hardware components" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlMbptsAvta-WaMN53UPiB0WfUByBg1sXZc4mixJkWQqEOLuuoP4wPlt5vgkf-2IL2WcrtZkasX4K2W4cCdDvyIXPt-uBxWb9IGErPPJ5WH99z9RrvseucTKTiep-0x3WbWgvrJg4FfIJ1m29B7bY02je-zziaIZ4FPrqC09Vs_R93X-Kkqc8f7Rk8BPHMiYSvhohoy7zRgpo-SeTsoMU2V84ms6CNKvCaZWUqMEi_ic8cAoVj4OrSt7vl1xdPeZp-tqPlFCHRMZs"/>
+</div>
+</div>
+</section>
+<!-- Results Section: Tonal Stacking -->
+<section class="mt-20">
+<div class="bg-surface-container-low rounded-[2.5rem] p-8 md:p-12">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<span class="inline-block px-4 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-[10px] font-bold tracking-widest uppercase mb-4">Performance Report</span>
+<h3 class="text-5xl font-black tracking-tighter text-on-surface">Rig Potential: 94%</h3>
+</div>
+<div class="flex gap-4">
+<div class="bg-surface-container-lowest p-6 rounded-2xl flex flex-col items-center min-w-[120px]">
+<span class="text-[10px] font-bold text-outline uppercase tracking-widest mb-1">Stability</span>
+<span class="text-2xl font-bold text-primary">A+</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl flex flex-col items-center min-w-[120px]">
+<span class="text-[10px] font-bold text-outline uppercase tracking-widest mb-1">Thermal</span>
+<span class="text-2xl font-bold text-tertiary">82°C</span>
+</div>
+</div>
+</div>
+<!-- Bento Grid of Game Benchmarks -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<!-- Game Card 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-[2rem] flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-outline" data-icon="sports_esports">sports_esports</span>
+<span class="text-[10px] font-bold text-primary uppercase tracking-widest">4K Ultra</span>
+</div>
+<h4 class="text-xl font-bold mb-1">Cyberpunk 2077</h4>
+<p class="text-xs text-on-surface-variant">Path Tracing Overdrive</p>
+</div>
+<div class="mt-8 flex items-baseline gap-2">
+<span class="text-6xl font-black tracking-tighter">84</span>
+<span class="text-lg font-bold text-outline">FPS</span>
+</div>
+</div>
+<!-- Game Card 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-[2rem] flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-outline" data-icon="sports_esports">sports_esports</span>
+<span class="text-[10px] font-bold text-primary uppercase tracking-widest">4K High</span>
+</div>
+<h4 class="text-xl font-bold mb-1">Starfield</h4>
+<p class="text-xs text-on-surface-variant">FSR 3 Performance</p>
+</div>
+<div class="mt-8 flex items-baseline gap-2">
+<span class="text-6xl font-black tracking-tighter">112</span>
+<span class="text-lg font-bold text-outline">FPS</span>
+</div>
+</div>
+<!-- AI Insight Card - Asymmetric Focus -->
+<div class="md:col-span-1 bg-gradient-to-br from-tertiary to-tertiary-container p-8 rounded-[2rem] text-on-tertiary-container">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="text-[10px] font-bold tracking-widest uppercase">AI Architect Insight</span>
+</div>
+<p class="text-lg font-medium leading-relaxed mb-8">
+                            "Your CPU is currently bottlenecking the GPU by <span class="font-bold">14%</span> at 4K. Upgrading to a 7950X3D would unlock approximately 18 more frames in CPU-intensive simulations."
+                        </p>
+<button class="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-white/20 transition-all">
+                            View Upgrade Path
+                        </button>
+</div>
+</div>
+<!-- Secondary Data Row -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="bg-surface-container p-6 rounded-2xl">
+<p class="text-[10px] font-bold text-outline uppercase tracking-widest mb-2">Power Draw</p>
+<p class="text-xl font-bold">580W <span class="text-sm font-normal text-on-surface-variant">Peak</span></p>
+</div>
+<div class="bg-surface-container p-6 rounded-2xl">
+<p class="text-[10px] font-bold text-outline uppercase tracking-widest mb-2">VRAM Usage</p>
+<p class="text-xl font-bold">14.2 GB <span class="text-sm font-normal text-on-surface-variant">/ 16GB</span></p>
+</div>
+<div class="bg-surface-container p-6 rounded-2xl">
+<p class="text-[10px] font-bold text-outline uppercase tracking-widest mb-2">Latency</p>
+<p class="text-xl font-bold">8.4 ms <span class="text-sm font-normal text-on-surface-variant">AVG</span></p>
+</div>
+<div class="bg-surface-container p-6 rounded-2xl border-2 border-primary/10">
+<p class="text-[10px] font-bold text-primary uppercase tracking-widest mb-2">Efficiency Score</p>
+<p class="text-xl font-bold">Gold Tier</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Destination: Benchmark) -->
+<nav class="fixed bottom-0 w-full rounded-t-[24px] z-50 bg-white/70 backdrop-blur-2xl border-t border-slate-200/20 shadow-[0_-8px_30px_rgb(0,0,0,0.04)] flex justify-around items-center h-20 px-4 pb-2">
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-blue-600 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="architecture">architecture</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter">Build</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-100 text-blue-800 rounded-2xl px-5 py-2 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="speed">speed</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter">Benchmark</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-blue-600 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="psychology">psychology</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter">AI Chat</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-blue-600 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="compare_arrows">compare_arrows</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter">Compare</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-blue-600 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter">Profile</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PC ARCHITECT - Login</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#adc6ff",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e3e2e7",
+                        "surface-container": "#eeedf3",
+                        "on-primary-fixed-variant": "#004493",
+                        "surface-dim": "#dad9df",
+                        "tertiary": "#9e3d00",
+                        "tertiary-fixed": "#ffdbcc",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#fffbff",
+                        "primary-fixed-dim": "#adc6ff",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#3631b4",
+                        "surface-container-high": "#e9e7ed",
+                        "background": "#faf9fe",
+                        "primary": "#0058bc",
+                        "on-tertiary-fixed": "#351000",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#f1f0f5",
+                        "surface-container-low": "#f4f3f8",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#c64f00",
+                        "secondary": "#4c4aca",
+                        "surface-container-highest": "#e3e2e7",
+                        "on-tertiary-fixed-variant": "#7c2e00",
+                        "surface-bright": "#faf9fe",
+                        "on-primary-fixed": "#001a41",
+                        "on-surface": "#1a1b1f",
+                        "tertiary-fixed-dim": "#ffb595",
+                        "on-secondary-container": "#fffbff",
+                        "surface": "#faf9fe",
+                        "on-secondary-fixed": "#0c006a",
+                        "secondary-fixed": "#e2dfff",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#6664e4",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#c1c6d7",
+                        "on-background": "#1a1b1f",
+                        "on-error-container": "#93000a",
+                        "outline": "#717786",
+                        "inverse-surface": "#2f3034",
+                        "primary-container": "#0070eb",
+                        "secondary-fixed-dim": "#c2c1ff",
+                        "on-primary-container": "#fefcff",
+                        "surface-tint": "#005bc1",
+                        "on-surface-variant": "#414755",
+                        "primary-fixed": "#d8e2ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.25rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .floating-label-input:focus-within label,
+        .floating-label-input input:not(:placeholder-shown) + label {
+            transform: translateY(-1.5rem) scale(0.85);
+            color: #0058bc;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body text-on-background selection:bg-primary/20">
+<main class="min-h-screen flex flex-col md:flex-row overflow-hidden">
+<!-- Top 40% (Mobile) / Left Side (Desktop) Hero Illustration -->
+<section class="h-[353px] md:h-screen md:w-5/12 relative overflow-hidden bg-slate-900">
+<img alt="High-end hardware" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-60" data-alt="Macro view of a high-end motherboard with glowing blue liquid cooling tubes and architectural brushed aluminum heat sinks in a dark studio setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz2FxatyP8_zNlvsm7Vfodvp_DQxVXnLYpC2OZK3m-AOeg0eaiMFXT0q2kCxSH1aFS9CNvDZXwXQ-cLGwmqjGr_gJnZUiSXVcai4PT761FYO6oQGuJPYbcN7QwP7QqZwl1op2OyACNJzokOnflkkRKXLGSn2TpeR6weMlpHPtJIx-fh2-_B1JfPw8T0d4xMbwTeT1Lf9DZnb60eZq3fyVIVb3VA0kPh40wdvuC_6a5lieDTUX17QJL2H8KB43wQsX7mvSlxVMWv5U"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+<div class="relative h-full flex flex-col justify-end p-8 md:p-12">
+<div class="mb-2">
+<span class="text-primary-fixed bg-primary/20 px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase">Precision Architect</span>
+</div>
+<h1 class="text-4xl md:text-5xl font-black text-white tracking-tighter leading-none mb-4">
+                    PC <br/>ARCHITECT
+                </h1>
+<p class="text-slate-400 text-sm md:text-base max-w-xs font-medium leading-relaxed">
+                    Orchestrate high-performance systems with surgical precision and AI-driven insights.
+                </p>
+</div>
+</section>
+<!-- Bottom 60% (Mobile) / Right Side (Desktop) Login Form -->
+<section class="flex-1 h-[530px] md:h-screen bg-surface-container-low flex items-center justify-center p-6 md:p-12">
+<div class="w-full max-w-md bg-surface-container-lowest rounded-[20px] shadow-[0px_24px_48px_-12px_rgba(26,27,31,0.06)] p-8 md:p-10 transition-all duration-500">
+<header class="mb-10">
+<h2 class="text-2xl font-bold text-on-surface tracking-tight mb-2">Welcome Back</h2>
+<p class="text-on-surface-variant text-sm font-medium">Access your digital hardware atelier.</p>
+</header>
+<form class="space-y-6">
+<!-- Email Input -->
+<div class="relative floating-label-input">
+<input class="peer w-full h-14 px-4 pt-4 bg-surface-container-highest border-none rounded-xl text-on-surface focus:ring-2 focus:ring-primary/20 transition-all outline-none" id="email" name="email" placeholder=" " type="email"/>
+<label class="absolute left-4 top-4 text-on-surface-variant transition-all duration-200 pointer-events-none origin-left" for="email">
+                            Email Address
+                        </label>
+</div>
+<!-- Password Input -->
+<div class="relative floating-label-input">
+<input class="peer w-full h-14 px-4 pt-4 bg-surface-container-highest border-none rounded-xl text-on-surface focus:ring-2 focus:ring-primary/20 transition-all outline-none" id="password" name="password" placeholder=" " type="password"/>
+<label class="absolute left-4 top-4 text-on-surface-variant transition-all duration-200 pointer-events-none origin-left" for="password">
+                            Password
+                        </label>
+<button class="absolute right-4 top-4 text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="visibility">visibility</span>
+</button>
+</div>
+<div class="flex items-center justify-end">
+<a class="text-xs font-bold text-primary hover:text-primary-container tracking-wide uppercase transition-colors" href="#">Forgot Password?</a>
+</div>
+<!-- Action Buttons -->
+<div class="space-y-4 pt-4">
+<button class="w-full h-14 bg-gradient-to-r from-primary to-primary-container text-white font-bold rounded-xl shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all duration-200 uppercase tracking-widest text-sm" type="submit">
+                            Login to Console
+                        </button>
+<button class="w-full h-14 bg-transparent border-2 border-surface-container-highest text-on-surface font-bold rounded-xl hover:bg-surface-container-high transition-all duration-200 uppercase tracking-widest text-sm" type="button">
+                            Request Access
+                        </button>
+</div>
+</form>
+<footer class="mt-12 text-center">
+<div class="flex items-center justify-center space-x-4">
+<div class="h-[1px] flex-1 bg-surface-variant"></div>
+<span class="text-[10px] text-on-surface-variant font-bold tracking-[0.2em] uppercase">Trusted Hardware Partners</span>
+<div class="h-[1px] flex-1 bg-surface-variant"></div>
+</div>
+<div class="mt-6 flex justify-center space-x-8 opacity-40 grayscale contrast-125">
+<span class="material-symbols-outlined text-2xl" data-icon="memory">memory</span>
+<span class="material-symbols-outlined text-2xl" data-icon="speed">speed</span>
+<span class="material-symbols-outlined text-2xl" data-icon="settings_input_component">settings_input_component</span>
+</div>
+</footer>
+</div>
+</section>
+</main>
+<!-- Contextual suppressed Nav/FAB: The instructions mandate suppression for focused login journeys -->
+</body></html>

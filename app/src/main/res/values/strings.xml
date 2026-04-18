@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyPC App</string>
+    <string name="default_web_client_id">835583151702-aboqc5np7bhcps4db9hkfrjkr3u94cnl.apps.googleusercontent.com</string>
+
+    <!-- Login -->
+    <string name="sign_in_google">Sign in with Google</string>
+    <string name="login_email">Login with Email</string>
+    <string name="create_account">Create Account</string>
+
+    <!-- Home -->
+    <string name="make_new_pc">🖥️ Let\'s Make New PC</string>
+    <string name="compare_my_pc">⚖️ Compare My PC</string>
+    <string name="help">💬 Help &amp; Support</string>
+
+    <!-- Component Selection -->
+    <string name="next">Next →</string>
+    <string name="skip">Skip</string>
+
+    <!-- Budget -->
+    <string name="enter_budget">Enter your total budget (₹)</string>
+    <string name="get_suggestions">Get AI Suggestions 🚀</string>
+
+    <!-- Result -->
+    <string name="save_build">💾 Save Build</string>
+    <string name="share_build">📤 Share Build</string>
+    <string name="buy_amazon">🛒 Amazon</string>
+    <string name="buy_flipkart">🛒 Flipkart</string>
+    <string name="your_build">Your PC Build</string>
+    <string name="upgrade_suggestions">💡 Upgrade Suggestions</string>
+    <string name="no_upgrades">✅ Your build is already optimal within your budget!</string>
+
+    <!-- Help -->
+    <string name="ai_assistant">🤖 AI Assistant</string>
+    <string name="call_support">📞 Call Support</string>
+    <string name="type_question">Ask anything about PC building...</string>
+    <string name="send">Send</string>
+</resources>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#adc6ff",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e3e2e7",
+                        "surface-container": "#eeedf3",
+                        "on-primary-fixed-variant": "#004493",
+                        "surface-dim": "#dad9df",
+                        "tertiary": "#9e3d00",
+                        "tertiary-fixed": "#ffdbcc",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#fffbff",
+                        "primary-fixed-dim": "#adc6ff",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#3631b4",
+                        "surface-container-high": "#e9e7ed",
+                        "background": "#faf9fe",
+                        "primary": "#0058bc",
+                        "on-tertiary-fixed": "#351000",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#f1f0f5",
+                        "surface-container-low": "#f4f3f8",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#c64f00",
+                        "secondary": "#4c4aca",
+                        "surface-container-highest": "#e3e2e7",
+                        "on-tertiary-fixed-variant": "#7c2e00",
+                        "surface-bright": "#faf9fe",
+                        "on-primary-fixed": "#001a41",
+                        "on-surface": "#1a1b1f",
+                        "tertiary-fixed-dim": "#ffb595",
+                        "on-secondary-container": "#fffbff",
+                        "surface": "#faf9fe",
+                        "on-secondary-fixed": "#0c006a",
+                        "secondary-fixed": "#e2dfff",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#6664e4",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#c1c6d7",
+                        "on-background": "#1a1b1f",
+                        "on-error-container": "#93000a",
+                        "outline": "#717786",
+                        "inverse-surface": "#2f3034",
+                        "primary-container": "#0070eb",
+                        "secondary-fixed-dim": "#c2c1ff",
+                        "on-primary-container": "#fefcff",
+                        "surface-tint": "#005bc1",
+                        "on-surface-variant": "#414755",
+                        "primary-fixed": "#d8e2ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .slider-thumb::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            background: #0058bc;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 4px solid #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .custom-slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 8px;
+            background: #eeedf3;
+            border-radius: 10px;
+            outline: none;
+        }
+        .ai-pulse {
+            position: absolute;
+            inset: -4px;
+            background: linear-gradient(135deg, #9e3d00, #ffdbcc);
+            filter: blur(8px);
+            opacity: 0.4;
+            border-radius: 9999px;
+            z-index: -1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="text-blue-700 p-2 hover:bg-slate-200/50 transition-colors rounded-full Active: scale-95 duration-150">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="text-lg font-black tracking-tighter text-blue-700 uppercase">PC ARCHITECT</h1>
+</div>
+<div class="flex items-center gap-4">
+<img alt="User profile avatar" class="w-8 h-8 rounded-full object-cover" data-alt="close-up portrait of a professional hardware engineer with clean lighting and neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY_a-gvohgLISxj2PmisIO8AyNHYfF5n8L_sJC6fMXy0WKOxFsSbcbbspenaoZhfSSQTiqYlS1XrXKavSy2k133AL17QXzetoVe1BJVomBtCpfgT5mbPmNJNftEIlnS8yaEFlNOy0AuuDYWPCFc2XMM22l7ZaFZ1ivTGypP8hxZ3ZLgCxpW6L-eTLE-82B2jxRzKABG_Osv2lETmQVWq5YsJyewZoMUkaa4FgbIzJFmf3YT6HZ4GLuKd_KNrNrvdGzVWEfhExwxLA"/>
+</div>
+</header>
+<!-- Main Content: Budget Planner -->
+<main class="pt-24 pb-32 px-6 flex flex-col items-center max-w-4xl mx-auto w-full">
+<!-- Hero Section -->
+<section class="text-center mb-16">
+<span class="text-[10px] font-bold tracking-widest uppercase text-tertiary-fixed-variant bg-tertiary-fixed px-3 py-1 rounded-full mb-6 inline-block">AI Optimization Engine</span>
+<h2 class="text-4xl md:text-5xl font-black tracking-tight text-on-surface mb-4">Set Your Horizon</h2>
+<p class="text-on-surface-variant max-w-md mx-auto text-lg">Define your investment. Our neural engine will orchestrate the ultimate performance-per-dollar build.</p>
+</section>
+<!-- Budget Input Module -->
+<div class="w-full bg-surface-container-low p-8 md:p-12 rounded-2xl flex flex-col items-center">
+<!-- Currency Input Display -->
+<div class="flex flex-col items-center mb-12">
+<label class="text-[10px] font-bold tracking-widest uppercase text-on-surface-variant mb-2">Target Budget</label>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-light text-on-surface-variant">$</span>
+<input class="bg-transparent border-none text-center text-7xl font-black tracking-tighter text-primary focus:ring-0 p-0 w-64" readonly="" type="text" value="2,500"/>
+</div>
+</div>
+<!-- Premium Interactive Slider -->
+<div class="w-full max-w-2xl mb-12 relative px-4">
+<div class="flex justify-between w-full mb-4 px-2 text-[10px] font-bold tracking-widest uppercase text-outline">
+<span>$500</span>
+<span>$10,000</span>
+</div>
+<input class="custom-slider slider-thumb w-full cursor-pointer" max="10000" min="500" step="100" type="range" value="2500"/>
+<!-- Decorative Layering for Slider -->
+<div class="absolute top-[44px] left-0 h-2 bg-primary rounded-l-full pointer-events-none" style="width: 25%"></div>
+</div>
+<!-- Quick Select Chips -->
+<div class="flex flex-wrap justify-center gap-3 mb-16">
+<button class="px-6 py-2 rounded-full text-sm font-bold tracking-tight bg-surface-container-highest text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-all">
+                    $1,000
+                </button>
+<button class="px-8 py-3 rounded-full text-sm font-black tracking-tight bg-blue-100 text-primary transition-all ring-2 ring-primary/20">
+                    $2,500
+                </button>
+<button class="px-6 py-2 rounded-full text-sm font-bold tracking-tight bg-surface-container-highest text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-all">
+                    $3,500
+                </button>
+<button class="px-6 py-2 rounded-full text-sm font-bold tracking-tight bg-surface-container-highest text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-all">
+                    $5,000
+                </button>
+</div>
+<!-- CTA Section -->
+<div class="relative group">
+<div class="ai-pulse opacity-0 group-hover:opacity-40 transition-opacity"></div>
+<button class="relative bg-gradient-to-br from-primary to-primary-container text-on-primary px-12 py-5 rounded-full font-black tracking-tight text-lg shadow-2xl hover:scale-105 transition-transform flex items-center gap-3">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">psychology</span>
+                    Generate AI Build
+                </button>
+<!-- Subtle Status Indicator -->
+<p class="text-center text-[10px] font-bold tracking-widest uppercase text-tertiary mt-6 flex items-center justify-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                    Neural Engine Ready
+                </p>
+</div>
+</div>
+<!-- Exploded View Technical Graphics (Visual Flourish) -->
+<div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 w-full opacity-60">
+<div class="p-6 bg-surface-container-low rounded-xl border-l-4 border-primary">
+<span class="material-symbols-outlined text-primary mb-3">memory</span>
+<h4 class="font-black text-sm uppercase mb-1">Architecture</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Multi-dimensional component mapping based on current market volatility indices.</p>
+</div>
+<div class="p-6 bg-surface-container-low rounded-xl border-l-4 border-tertiary">
+<span class="material-symbols-outlined text-tertiary mb-3">query_stats</span>
+<h4 class="font-black text-sm uppercase mb-1">Benchmarks</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Synthesizing real-world FPS data from 45,000+ validated hardware configurations.</p>
+</div>
+<div class="p-6 bg-surface-container-low rounded-xl border-l-4 border-secondary">
+<span class="material-symbols-outlined text-secondary mb-3">balance</span>
+<h4 class="font-black text-sm uppercase mb-1">Equilibrium</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Advanced bottleneck prevention ensuring no single component limits your vision.</p>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full rounded-t-[24px] z-50 bg-white/70 backdrop-blur-2xl border-t border-slate-200/20 shadow-[0_-8px_30px_rgb(0,0,0,0.04)] flex justify-around items-center h-20 px-4 pb-2">
+<div class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-blue-600 transition-colors">
+<span class="material-symbols-outlined">architecture</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">Build</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-blue-600 transition-colors">
+<span class="material-symbols-outlined">speed</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">Benchmark</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-blue-100 text-blue-800 rounded-2xl px-5 py-2 transform scale-90 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">psychology</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">AI Chat</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-blue-600 transition-colors">
+<span class="material-symbols-outlined">compare_arrows</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">Compare</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-blue-600 transition-colors">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">Profile</span>
+</div>
+</nav>
+<!-- Side Decoration (Editorial) -->
+<div class="hidden lg:block fixed left-10 top-1/2 -rotate-90 origin-left text-[10px] font-black tracking-[0.4em] uppercase text-outline opacity-20 pointer-events-none">
+        DESIGNED FOR EXTREME PERFORMANCE // 2024 REV. 4
+    </div>
+</body></html>

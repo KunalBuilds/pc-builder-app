@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#adc6ff",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e3e2e7",
+                    "surface-container": "#eeedf3",
+                    "on-primary-fixed-variant": "#004493",
+                    "surface-dim": "#dad9df",
+                    "tertiary": "#9e3d00",
+                    "tertiary-fixed": "#ffdbcc",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-container": "#fffbff",
+                    "primary-fixed-dim": "#adc6ff",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#3631b4",
+                    "surface-container-high": "#e9e7ed",
+                    "background": "#faf9fe",
+                    "primary": "#0058bc",
+                    "on-tertiary-fixed": "#351000",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#f1f0f5",
+                    "surface-container-low": "#f4f3f8",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#c64f00",
+                    "secondary": "#4c4aca",
+                    "surface-container-highest": "#e3e2e7",
+                    "on-tertiary-fixed-variant": "#7c2e00",
+                    "surface-bright": "#faf9fe",
+                    "on-primary-fixed": "#001a41",
+                    "on-surface": "#1a1b1f",
+                    "tertiary-fixed-dim": "#ffb595",
+                    "on-secondary-container": "#fffbff",
+                    "surface": "#faf9fe",
+                    "on-secondary-fixed": "#0c006a",
+                    "secondary-fixed": "#e2dfff",
+                    "on-tertiary": "#ffffff",
+                    "secondary-container": "#6664e4",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#c1c6d7",
+                    "on-background": "#1a1b1f",
+                    "on-error-container": "#93000a",
+                    "outline": "#717786",
+                    "inverse-surface": "#2f3034",
+                    "primary-container": "#0070eb",
+                    "secondary-fixed-dim": "#c2c1ff",
+                    "on-primary-container": "#fefcff",
+                    "surface-tint": "#005bc1",
+                    "on-surface-variant": "#414755",
+                    "primary-fixed": "#d8e2ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1rem",
+                    "3xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter", "sans-serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "label": ["Inter", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .specular-gradient {
+            background: linear-gradient(135deg, #0058bc 0%, #0070eb 100%);
+        }
+        .hero-mesh {
+            background: radial-gradient(at 0% 0%, #d8e2ff 0%, transparent 50%),
+                        radial-gradient(at 100% 0%, #e2dfff 0%, transparent 50%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed">
+<!-- TopAppBar -->
+<header class="bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="text-blue-700 dark:text-blue-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors p-2 rounded-full active:scale-95 duration-150">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="text-lg font-black tracking-tighter text-blue-700 dark:text-blue-500 uppercase Inter">PC ARCHITECT</h1>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-sm font-medium text-on-surface-variant hidden md:block">Hardware Enthusiast</span>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden border-2 border-primary-fixed">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="Professional studio portrait of a tech enthusiast, clean lighting, neutral background, sharp focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHmTrR3wzRVl2nNrAUBxsSi1cBdZqUuOuISUH8nzGzwy0wWFyytZUIDXd6VSNHVrXrzBFnwlFtXfaQ60iTLYFYIF4Zwfe4nmCWu4sM02-q-XIbWwhbACntIid4Ov6S53yek5XXGh841tBSTwSamRVR7urewf0w522ew-Zbabfg5TeqGAQGx1WFWC9zPb7Q2_cTtKC-xEl8Uvfwy5SK__ddBCfcDBzgENZqACfsxBq0vX3z3ZbOiJghWieztIeA_m2Oe-gEjcDMHZU"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto space-y-12">
+<!-- Hero Greeting Section -->
+<section class="relative overflow-hidden rounded-3xl p-8 md:p-12 hero-mesh bg-surface-container-low min-h-[320px] flex flex-col justify-center">
+<div class="max-w-2xl relative z-10 space-y-4">
+<div class="inline-flex items-center px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-xs font-bold tracking-widest uppercase mb-2">
+<span class="material-symbols-outlined text-[14px] mr-2" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                    System Online
+                </div>
+<h2 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-on-surface">
+                    Welcome back, <span class="text-primary">Architect.</span>
+</h2>
+<p class="text-lg text-on-surface-variant max-w-lg leading-relaxed">
+                    Your current rig is performing at the top <span class="font-bold text-on-surface">8%</span> of its class. Ready to push the boundaries of performance today?
+                </p>
+<div class="pt-4 flex flex-wrap gap-4">
+<button class="specular-gradient text-on-primary px-8 py-4 rounded-full font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform active:scale-95">
+                        View Live Stats
+                    </button>
+<button class="bg-surface-container-high text-on-surface px-8 py-4 rounded-full font-bold hover:bg-surface-bright transition-colors">
+                        Rig History
+                    </button>
+</div>
+</div>
+<!-- Decorative Element -->
+<div class="absolute right-[-10%] bottom-[-10%] w-96 h-96 opacity-10 md:opacity-20 pointer-events-none">
+<span class="material-symbols-outlined text-[400px] text-primary" data-icon="memory">memory</span>
+</div>
+</section>
+<!-- Main Action Cards Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1: Architect -->
+<div class="group bg-surface-container-lowest p-8 rounded-3xl shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_24px_48px_-12px_rgba(0,0,0,0.06)] transition-all duration-300 flex flex-col items-start space-y-6">
+<div class="w-14 h-14 rounded-2xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="architecture" style="font-variation-settings: 'FILL' 0;">architecture</span>
+</div>
+<div class="space-y-2 flex-grow">
+<h3 class="text-2xl font-bold tracking-tight">Architect Your PC</h3>
+<p class="text-on-surface-variant leading-relaxed">Design your next masterpiece with our precision compatibility engine and real-time inventory.</p>
+</div>
+<div class="w-full flex items-center justify-between pt-4">
+<span class="text-sm font-bold tracking-widest uppercase text-primary">Start Build</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<!-- Card 2: Benchmark -->
+<div class="group bg-surface-container-lowest p-8 rounded-3xl shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_24px_48px_-12px_rgba(0,0,0,0.06)] transition-all duration-300 flex flex-col items-start space-y-6">
+<div class="w-14 h-14 rounded-2xl bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl" data-icon="speed" style="font-variation-settings: 'FILL' 0;">speed</span>
+</div>
+<div class="space-y-2 flex-grow">
+<h3 class="text-2xl font-bold tracking-tight">Benchmark Your Rig</h3>
+<p class="text-on-surface-variant leading-relaxed">Stress test your current configuration and see how you rank against the global enthusiast leaderboard.</p>
+</div>
+<div class="w-full flex items-center justify-between pt-4">
+<span class="text-sm font-bold tracking-widest uppercase text-secondary">Run Test</span>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<!-- Card 3: AI Chat -->
+<div class="group bg-surface-container-lowest p-8 rounded-3xl shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_24px_48px_-12px_rgba(0,0,0,0.06)] transition-all duration-300 flex flex-col items-start space-y-6">
+<div class="w-14 h-14 rounded-2xl bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-3xl" data-icon="psychology" style="font-variation-settings: 'FILL' 0;">psychology</span>
+</div>
+<div class="space-y-2 flex-grow">
+<h3 class="text-2xl font-bold tracking-tight">AI Help Chat</h3>
+<p class="text-on-surface-variant leading-relaxed">Stuck on a component? Our AI specialized in hardware architecture is ready to assist your design.</p>
+</div>
+<div class="w-full flex items-center justify-between pt-4">
+<span class="text-sm font-bold tracking-widest uppercase text-tertiary">Ask Assistant</span>
+<span class="material-symbols-outlined text-tertiary group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Secondary Insights / Tonal Layering Example -->
+<section class="bg-surface-container-low rounded-3xl p-8 md:p-12 grid md:grid-cols-2 gap-12 items-center">
+<div class="space-y-6">
+<div class="space-y-2">
+<label class="text-[10px] font-bold tracking-[0.2em] uppercase text-on-surface-variant">Active Configuration</label>
+<h4 class="text-3xl font-bold tracking-tight">Core-i9 Precision Series</h4>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest p-4 rounded-2xl">
+<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider mb-1">CPU Temp</p>
+<p class="text-3xl font-black tracking-tighter text-on-surface">32°C</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-2xl">
+<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider mb-1">Fan RPM</p>
+<p class="text-3xl font-black tracking-tighter text-on-surface">1,240</p>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant italic">Next scheduled maintenance in 14 days.</p>
+</div>
+<div class="relative aspect-video rounded-2xl overflow-hidden bg-slate-900 shadow-2xl">
+<img alt="Hardware close-up" class="w-full h-full object-cover" data-alt="Interior of a high-end gaming PC with neon blue cooling liquid tubes and sleek black components, futuristic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARhgYQ8FIF1gH21keOxx_P5PHE1mBjrN7zE3dimbconmd3F6lSNCBBx4RNQxc4c1UanvjcqPrDbOemPl8SNPOzwKGnSBtBX37S-YlAvUFL7Zkf5fu7QMSE6mPjUawxwQdHttCxpwc0MJpjuWdg_VGrhWiri-weY2bnt9Yko5-umIS9KlL9fmTrfOdKAYzCSh6qizl4liN9hMiyhWxn7xuOg3W_rJB-tipQyVA45mJOKx1culq39uKukLeG5cZZTMT4WIzHfckdxPU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 flex justify-between items-end">
+<div class="text-white">
+<p class="text-[10px] font-bold tracking-widest uppercase opacity-80">Primary Node</p>
+<p class="font-bold">AESTHETIC-01</p>
+</div>
+<div class="flex gap-2">
+<div class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
+<p class="text-[10px] text-white font-bold">ONLINE</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-white/70 dark:bg-slate-900/70 backdrop-blur-2xl fixed bottom-0 w-full rounded-t-[24px] z-50 flex justify-around items-center h-20 px-4 pb-2 shadow-[0_-8px_30px_rgb(0,0,0,0.04)] border-t border-slate-200/20 dark:border-slate-800/20 md:hidden">
+<a class="flex flex-col items-center justify-center bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-2xl px-5 py-2 transform scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="architecture">architecture</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">Build</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-600 dark:hover:text-blue-300" href="#">
+<span class="material-symbols-outlined" data-icon="speed">speed</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">Benchmark</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-600 dark:hover:text-blue-300" href="#">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">AI Chat</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-600 dark:hover:text-blue-300" href="#">
+<span class="material-symbols-outlined" data-icon="compare_arrows">compare_arrows</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">Compare</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-600 dark:hover:text-blue-300" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">Profile</span>
+</a>
+</nav>
+<!-- Floating Action Button - Only for Home Context -->
+<div class="fixed bottom-24 right-6 md:bottom-12 md:right-12 z-40">
+<button class="specular-gradient w-16 h-16 rounded-3xl flex items-center justify-center text-white shadow-2xl shadow-primary/40 hover:scale-110 active:scale-95 transition-all group">
+<span class="material-symbols-outlined text-3xl group-hover:rotate-90 transition-transform duration-300" data-icon="add">add</span>
+</button>
+</div>
+</body></html>

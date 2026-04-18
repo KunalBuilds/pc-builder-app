@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#adc6ff",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e3e2e7",
+                    "surface-container": "#eeedf3",
+                    "on-primary-fixed-variant": "#004493",
+                    "surface-dim": "#dad9df",
+                    "tertiary": "#9e3d00",
+                    "tertiary-fixed": "#ffdbcc",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-container": "#fffbff",
+                    "primary-fixed-dim": "#adc6ff",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#3631b4",
+                    "surface-container-high": "#e9e7ed",
+                    "background": "#faf9fe",
+                    "primary": "#0058bc",
+                    "on-tertiary-fixed": "#351000",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#f1f0f5",
+                    "surface-container-low": "#f4f3f8",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#c64f00",
+                    "secondary": "#4c4aca",
+                    "surface-container-highest": "#e3e2e7",
+                    "on-tertiary-fixed-variant": "#7c2e00",
+                    "surface-bright": "#faf9fe",
+                    "on-primary-fixed": "#001a41",
+                    "on-surface": "#1a1b1f",
+                    "tertiary-fixed-dim": "#ffb595",
+                    "on-secondary-container": "#fffbff",
+                    "surface": "#faf9fe",
+                    "on-secondary-fixed": "#0c006a",
+                    "secondary-fixed": "#e2dfff",
+                    "on-tertiary": "#ffffff",
+                    "secondary-container": "#6664e4",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#c1c6d7",
+                    "on-background": "#1a1b1f",
+                    "on-error-container": "#93000a",
+                    "outline": "#717786",
+                    "inverse-surface": "#2f3034",
+                    "primary-container": "#0070eb",
+                    "secondary-fixed-dim": "#c2c1ff",
+                    "on-primary-container": "#fefcff",
+                    "surface-tint": "#005bc1",
+                    "on-surface-variant": "#414755",
+                    "primary-fixed": "#d8e2ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "xxl": "1.25rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(20px);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/10">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="p-2 text-blue-700 hover:bg-slate-200/50 transition-colors rounded-full active:scale-95 duration-150">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<span class="text-lg font-black tracking-tighter text-blue-700 uppercase font-['Inter']">PC ARCHITECT</span>
+</div>
+<div class="h-10 w-10 rounded-full overflow-hidden border border-surface-variant">
+<img alt="User profile avatar" class="h-full w-full object-cover" data-alt="professional headshot of a hardware enthusiast in a clean modern studio setting with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgSdecfJwpnU-28cL1RdPRnjgL64bna4rAAuIdlMgZFJThry08XSYmEMnhWwMMoxCw4U_lqOuILCdiS_Lcx8DCr-KjfiEtg1PWT_fMMOhz1FwcyJNxkZrwXFPDFLwvX3FPGD6ktsba8kctkRtZ3LhTeZ1HnC3LObia3e06J6pYbwXzOeKtJ9-hEf2ZobUnmt_IgU4pqV5HaYSspBVxQOMYLz67WK02VegJscSCOCTdnQrDF1i5CZP7ObvlzftYJtdHm87LQV1JkOc"/>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-5xl mx-auto min-h-screen">
+<!-- Header Section -->
+<section class="mb-12">
+<span class="text-primary font-label text-xs font-bold tracking-[0.2em] uppercase mb-3 block">Step 01 / Configuration</span>
+<h1 class="text-4xl md:text-5xl font-extrabold tracking-tighter text-on-surface mb-4">Choose your <br/><span class="text-primary">Architecture.</span></h1>
+<p class="text-on-surface-variant max-w-md leading-relaxed">Select the foundation for your next build. This choice dictates compatible motherboards and memory configurations.</p>
+</section>
+<!-- Platform Selection Cards (Asymmetric Layout) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Intel Card (Selected State Example) -->
+<div class="group relative flex flex-col justify-between bg-surface-container-lowest rounded-xxl p-8 transition-all duration-300 ring-2 ring-primary shadow-[0px_24px_48px_-12px_rgba(0,88,188,0.08)]">
+<div class="flex justify-between items-start mb-12">
+<div class="h-14 w-14 bg-blue-50 flex items-center justify-center rounded-xl">
+<img alt="Intel Logo" class="h-8 w-8 object-contain" data-alt="Clean minimalist blue logo graphic representing high performance computer processors on a white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAutmjT4kuCBuUno5WYmqGWjVaRbxABfX9-KEH6obfXPmZNlb0CdcaGWwnqSYaEvCcSBDFp81DmBAHeg4qtumTByq3XjmeZ07tD05RVk9kdvBdgW_FWBo5Kw2Mfm-USXvwEQnWvYBGAw6ctIomszLZUXXCDLOyLkZrXGCqmzZNwhYD-X8PdK03VZ3vBbj4qVAIA_m-q7bgivWYVE2KzJ92JfSScoguCTed6jMKBgVZ3RXjbomW8o10H76_RgJB7yjAiVgGBcJgXvNc"/>
+</div>
+<div class="bg-primary text-on-primary text-[10px] font-bold px-3 py-1 rounded-full tracking-widest uppercase">Selected</div>
+</div>
+<div>
+<h2 class="text-2xl font-bold tracking-tight mb-2">Intel® Core™</h2>
+<p class="text-sm text-on-surface-variant mb-6">Optimized for high-frequency gaming and heavy single-threaded professional workflows.</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-high text-on-surface-variant text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">LGA 1700</span>
+<span class="bg-surface-container-high text-on-surface-variant text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">DDR5 Ready</span>
+<span class="bg-surface-container-high text-on-surface-variant text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">6.0 GHz Turbo</span>
+</div>
+</div>
+<!-- Background Decorative Texture -->
+<div class="absolute top-0 right-0 p-4 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-8xl" data-icon="memory">memory</span>
+</div>
+</div>
+<!-- AMD Card -->
+<div class="group relative flex flex-col justify-between bg-surface-container-low rounded-xxl p-8 transition-all duration-300 hover:bg-surface-container-lowest hover:shadow-[0px_24px_48px_-12px_rgba(0,0,0,0.06)] border-2 border-transparent">
+<div class="flex justify-between items-start mb-12">
+<div class="h-14 w-14 bg-red-50 flex items-center justify-center rounded-xl">
+<img alt="AMD Logo" class="h-8 w-8 object-contain" data-alt="Sleek modern red logo symbol representing advanced micro devices and high speed processing units" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs_Swi7heiI012o3cnimAyD2A6e5JvZSEgmLH_vdNwSiUw-vE-Sx11MdKv2YqlqXQHhqsr-_x05C3Dmz7mzHVkXOoUsn4XUumddnLfgGsrK5xb2JJsoNn0iXS-SQ7Oem6YF5AkHmXX0jr3T0dXDqkEocoz3ygHvmAI3a1bFO5s-8ShBpOaL158wB4qHzMNliXEuqRMUokp1qPS2V-DuF5mjvF2w170G9YW2lzf4fTmPF13g0hV2iWfzuWsziwS_JLQK4C3JbBa2lk"/>
+</div>
+</div>
+<div>
+<h2 class="text-2xl font-bold tracking-tight mb-2">AMD Ryzen™</h2>
+<p class="text-sm text-on-surface-variant mb-6">Exceptional multi-core performance with advanced 5nm efficiency and long-term socket support.</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-highest text-on-surface-variant text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Socket AM5</span>
+<span class="bg-surface-container-highest text-on-surface-variant text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">PCIe 5.0</span>
+<span class="bg-surface-container-highest text-on-surface-variant text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">3D V-Cache</span>
+</div>
+</div>
+<!-- Background Decorative Texture -->
+<div class="absolute top-0 right-0 p-4 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-8xl" data-icon="developer_board">developer_board</span>
+</div>
+</div>
+</div>
+<!-- AI Assistant Suggestion -->
+<div class="mt-12 bg-tertiary-fixed rounded-xxl p-6 flex flex-col md:flex-row items-center gap-6">
+<div class="h-12 w-12 bg-tertiary-container text-on-tertiary-container rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+</div>
+<div class="flex-grow text-center md:text-left">
+<p class="text-on-tertiary-fixed font-semibold text-sm">Architect AI Suggestion</p>
+<p class="text-on-tertiary-fixed-variant text-sm">Based on your "Workstation" goal, I recommend the Intel platform for its superior AVX-512 support in your preferred software.</p>
+</div>
+<button class="bg-tertiary text-white px-6 py-3 rounded-full text-sm font-bold tracking-wide hover:opacity-90 transition-opacity active:scale-95">
+                Apply Recommended
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full rounded-t-[24px] z-50 bg-white/70 backdrop-blur-2xl border-t border-slate-200/20 shadow-[0_-8px_30px_rgb(0,0,0,0.04)] flex justify-around items-center h-20 px-4 pb-2">
+<a class="flex flex-col items-center justify-center bg-blue-100 text-blue-800 rounded-2xl px-5 py-2 transform scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="architecture">architecture</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">Build</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-blue-600 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="speed">speed</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">Benchmark</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-blue-600 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">AI Chat</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-blue-600 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="compare_arrows">compare_arrows</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">Compare</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-blue-600 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-bold tracking-widest uppercase Inter mt-1">Profile</span>
+</a>
+</nav>
+<!-- Navigation FAB (Action Button) -->
+<div class="fixed bottom-24 right-6 md:right-12">
+<button class="h-16 w-16 rounded-2xl bg-primary text-on-primary shadow-2xl flex items-center justify-center hover:bg-primary-container transition-all active:scale-90 group">
+<span class="material-symbols-outlined text-3xl" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</body></html>

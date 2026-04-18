@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Benchmark Your Rig — Stitch "PC Architect Explorer" -->
+<!-- HTML ref: benchmark_your_rig/code.html -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <!-- TOP APP BAR -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/surface_container_low"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="20dp"
+        android:orientation="horizontal"
+        android:elevation="4dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="PC ARCHITECT"
+            android:textColor="@color/primary"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.04" />
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/pc_builder_icon"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="32dp">
+
+            <!-- ============================================================
+                 HERO INPUT SECTION
+            ============================================================ -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Benchmark Your Rig"
+                android:textColor="@color/on_surface"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:letterSpacing="-0.02"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Input your specifications for a precise performance projection. Our neural engine calculates bottleneck probabilities and frame-rate targets."
+                android:textColor="@color/on_surface_variant"
+                android:textSize="14sp"
+                android:lineSpacingMultiplier="1.4"
+                android:layout_marginBottom="24dp" />
+
+            <!-- INPUT GRID — 2 rows of 2 fields -->
+            <!-- Row 1: GPU + CPU -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <!-- GPU Field -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GRAPHICS CARD"
+                        android:textColor="@color/outline"
+                        android:textSize="9sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.2"
+                        android:layout_marginBottom="6dp"
+                        android:paddingStart="4dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        app:cardBackgroundColor="@color/surface_container_highest"
+                        app:cardCornerRadius="14dp"
+                        app:cardElevation="0dp">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etGPU"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="e.g. RTX 4080 Super"
+                            android:textColorHint="@color/outline"
+                            android:textColor="@color/on_surface"
+                            android:textSize="13sp"
+                            android:background="@null"
+                            android:paddingHorizontal="14dp"
+                            android:inputType="text" />
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <!-- CPU Field -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PROCESSOR"
+                        android:textColor="@color/outline"
+                        android:textSize="9sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.2"
+                        android:layout_marginBottom="6dp"
+                        android:paddingStart="4dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        app:cardBackgroundColor="@color/surface_container_highest"
+                        app:cardCornerRadius="14dp"
+                        app:cardElevation="0dp">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etCPU"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="e.g. Ryzen 7 7800X3D"
+                            android:textColorHint="@color/outline"
+                            android:textColor="@color/on_surface"
+                            android:textSize="13sp"
+                            android:background="@null"
+                            android:paddingHorizontal="14dp"
+                            android:inputType="text" />
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Row 2: RAM + Storage -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MEMORY (RAM)"
+                        android:textColor="@color/outline"
+                        android:textSize="9sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.2"
+                        android:layout_marginBottom="6dp"
+                        android:paddingStart="4dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        app:cardBackgroundColor="@color/surface_container_highest"
+                        app:cardCornerRadius="14dp"
+                        app:cardElevation="0dp">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etRAM"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="e.g. 32GB DDR5-6000"
+                            android:textColorHint="@color/outline"
+                            android:textColor="@color/on_surface"
+                            android:textSize="13sp"
+                            android:background="@null"
+                            android:paddingHorizontal="14dp"
+                            android:inputType="text" />
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PRIMARY STORAGE"
+                        android:textColor="@color/outline"
+                        android:textSize="9sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.2"
+                        android:layout_marginBottom="6dp"
+                        android:paddingStart="4dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        app:cardBackgroundColor="@color/surface_container_highest"
+                        app:cardCornerRadius="14dp"
+                        app:cardElevation="0dp">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etStorage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="e.g. NVMe PCIe 4.0"
+                            android:textColorHint="@color/outline"
+                            android:textColor="@color/on_surface"
+                            android:textSize="13sp"
+                            android:background="@null"
+                            android:paddingHorizontal="14dp"
+                            android:inputType="text" />
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ANALYZE BUTTON — bg-tertiary-container pill (matches Stitch) -->
+            <Button
+                android:id="@+id/btnAnalyze"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:text="🧠  ANALYZE WITH AI"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/on_tertiary_container"
+                android:backgroundTint="@color/tertiary_container"
+                app:cornerRadius="100dp"
+                android:stateListAnimator="@null"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Status text -->
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text=""
+                android:textColor="@color/on_surface_variant"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Progress bar (shown during analysis) -->
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                app:indicatorColor="@color/primary"
+                app:trackColor="@color/surface_container_highest"
+                app:trackCornerRadius="4dp"
+                android:visibility="gone"
+                android:layout_marginBottom="24dp" />
+
+            <!-- ============================================================
+                 RESULTS SECTION — bg-surface-container-low rounded-[2.5rem]
+            ============================================================ -->
+            <LinearLayout
+                android:id="@+id/layoutResults"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/surface_container_low"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:visibility="gone"
+                android:layout_marginTop="16dp">
+
+                <!-- Results header row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="24dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/tertiary_fixed"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="5dp"
+                            android:layout_marginBottom="8dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="PERFORMANCE REPORT"
+                                android:textColor="@color/on_tertiary_fixed"
+                                android:textSize="9sp"
+                                android:textStyle="bold"
+                                android:letterSpacing="0.15" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvRigPotential"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rig Potential: —"
+                            android:textColor="@color/on_surface"
+                            android:textSize="28sp"
+                            android:textStyle="bold"
+                            android:letterSpacing="-0.02" />
+                    </LinearLayout>
+
+                    <!-- Score tiles: Stability + Thermal -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            app:cardBackgroundColor="@color/surface_container_lowest"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="0dp">
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                                android:orientation="vertical" android:padding="12dp" android:gravity="center">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                    android:text="STABILITY" android:textColor="@color/outline"
+                                    android:textSize="8sp" android:textStyle="bold" android:letterSpacing="0.15"
+                                    android:layout_marginBottom="4dp" />
+                                <TextView android:id="@+id/tvStability" android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" android:text="—"
+                                    android:textColor="@color/primary" android:textSize="22sp"
+                                    android:textStyle="bold" android:gravity="center" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="@color/surface_container_lowest"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="0dp">
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                                android:orientation="vertical" android:padding="12dp" android:gravity="center">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                    android:text="THERMAL" android:textColor="@color/outline"
+                                    android:textSize="8sp" android:textStyle="bold" android:letterSpacing="0.15"
+                                    android:layout_marginBottom="4dp" />
+                                <TextView android:id="@+id/tvThermal" android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" android:text="—°C"
+                                    android:textColor="@color/tertiary" android:textSize="22sp"
+                                    android:textStyle="bold" android:gravity="center" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- GAME BENCHMARK BENTO GRID (2 game cards + AI insight) -->
+                <!-- Game Card 1: Cyberpunk 2077 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardBackgroundColor="@color/surface_container_lowest"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="24dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="16dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="🎮" android:textSize="22sp" android:layout_marginEnd="8dp" />
+                            <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="4K ULTRA" android:textColor="@color/primary"
+                                android:textSize="10sp" android:textStyle="bold" android:letterSpacing="0.15" />
+                        </LinearLayout>
+
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Cyberpunk 2077" android:textColor="@color/on_surface"
+                            android:textSize="18sp" android:textStyle="bold" android:layout_marginBottom="2dp" />
+
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Path Tracing Overdrive" android:textColor="@color/on_surface_variant"
+                            android:textSize="12sp" android:layout_marginBottom="20dp" />
+
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:orientation="horizontal" android:gravity="bottom">
+                            <TextView android:id="@+id/tvCyberpunkFps" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:text="—"
+                                android:textColor="@color/on_surface" android:textSize="52sp"
+                                android:textStyle="bold" android:letterSpacing="-0.04" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text=" FPS" android:textColor="@color/outline"
+                                android:textSize="16sp" android:textStyle="bold"
+                                android:layout_marginBottom="8dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Game Card 2: Starfield -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardBackgroundColor="@color/surface_container_lowest"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="24dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="16dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="🎮" android:textSize="22sp" android:layout_marginEnd="8dp" />
+                            <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="4K HIGH" android:textColor="@color/primary"
+                                android:textSize="10sp" android:textStyle="bold" android:letterSpacing="0.15" />
+                        </LinearLayout>
+
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Starfield" android:textColor="@color/on_surface"
+                            android:textSize="18sp" android:textStyle="bold" android:layout_marginBottom="2dp" />
+
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="FSR 3 Performance" android:textColor="@color/on_surface_variant"
+                            android:textSize="12sp" android:layout_marginBottom="20dp" />
+
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:orientation="horizontal" android:gravity="bottom">
+                            <TextView android:id="@+id/tvStarfieldFps" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:text="—"
+                                android:textColor="@color/on_surface" android:textSize="52sp"
+                                android:textStyle="bold" android:letterSpacing="-0.04" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text=" FPS" android:textColor="@color/outline"
+                                android:textSize="16sp" android:textStyle="bold"
+                                android:layout_marginBottom="8dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- AI INSIGHT CARD — gradient from-tertiary to-tertiary-container -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/tertiary"
+                    android:orientation="vertical"
+                    android:padding="24dp"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="✨" android:textSize="18sp" android:layout_marginEnd="8dp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="AI ARCHITECT INSIGHT" android:textColor="@color/on_tertiary"
+                            android:textSize="10sp" android:textStyle="bold" android:letterSpacing="0.15" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvAiInsight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Run analysis to receive AI architectural insights."
+                        android:textColor="@color/on_tertiary"
+                        android:textSize="14sp"
+                        android:lineSpacingMultiplier="1.5"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Upgrade suggestions section -->
+                    <LinearLayout
+                        android:id="@+id/layoutUpgrades"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="UPGRADE SUGGESTIONS"
+                            android:textColor="@color/on_tertiary"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.15"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:id="@+id/tvUpgrades"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/on_tertiary"
+                            android:textSize="13sp"
+                            android:lineSpacingMultiplier="1.4" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- SECONDARY STATS ROW (4 stat chips) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:background="@color/surface_container"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="POWER DRAW" android:textColor="@color/outline"
+                            android:textSize="8sp" android:textStyle="bold" android:letterSpacing="0.2"
+                            android:layout_marginBottom="4dp" />
+                        <TextView android:id="@+id/tvPowerDraw" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="—W"
+                            android:textColor="@color/on_surface" android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:background="@color/surface_container"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="VRAM USAGE" android:textColor="@color/outline"
+                            android:textSize="8sp" android:textStyle="bold" android:letterSpacing="0.2"
+                            android:layout_marginBottom="4dp" />
+                        <TextView android:id="@+id/tvVRAM" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="—GB"
+                            android:textColor="@color/on_surface" android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/primary_fixed"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="EFFICIENCY" android:textColor="@color/primary"
+                            android:textSize="8sp" android:textStyle="bold" android:letterSpacing="0.2"
+                            android:layout_marginBottom="4dp" />
+                        <TextView android:id="@+id/tvEfficiency" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="—"
+                            android:textColor="@color/on_surface" android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

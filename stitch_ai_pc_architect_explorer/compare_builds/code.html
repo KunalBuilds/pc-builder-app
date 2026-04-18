@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Compare Builds - PC ARCHITECT</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#adc6ff",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e3e2e7",
+                    "surface-container": "#eeedf3",
+                    "on-primary-fixed-variant": "#004493",
+                    "surface-dim": "#dad9df",
+                    "tertiary": "#9e3d00",
+                    "tertiary-fixed": "#ffdbcc",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-container": "#fffbff",
+                    "primary-fixed-dim": "#adc6ff",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#3631b4",
+                    "surface-container-high": "#e9e7ed",
+                    "background": "#faf9fe",
+                    "primary": "#0058bc",
+                    "on-tertiary-fixed": "#351000",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#f1f0f5",
+                    "surface-container-low": "#f4f3f8",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#c64f00",
+                    "secondary": "#4c4aca",
+                    "surface-container-highest": "#e3e2e7",
+                    "on-tertiary-fixed-variant": "#7c2e00",
+                    "surface-bright": "#faf9fe",
+                    "on-primary-fixed": "#001a41",
+                    "on-surface": "#1a1b1f",
+                    "tertiary-fixed-dim": "#ffb595",
+                    "on-secondary-container": "#fffbff",
+                    "surface": "#faf9fe",
+                    "on-secondary-fixed": "#0c006a",
+                    "secondary-fixed": "#e2dfff",
+                    "on-tertiary": "#ffffff",
+                    "secondary-container": "#6664e4",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#c1c6d7",
+                    "on-background": "#1a1b1f",
+                    "on-error-container": "#93000a",
+                    "outline": "#717786",
+                    "inverse-surface": "#2f3034",
+                    "primary-container": "#0070eb",
+                    "secondary-fixed-dim": "#c2c1ff",
+                    "on-primary-container": "#fefcff",
+                    "surface-tint": "#005bc1",
+                    "on-surface-variant": "#414755",
+                    "primary-fixed": "#d8e2ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1.25rem",
+                    "3xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="text-blue-700 dark:text-blue-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors p-2 rounded-full active:scale-95 duration-150">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<span class="text-lg font-black tracking-tighter text-blue-700 dark:text-blue-500 uppercase font-['Inter']">PC ARCHITECT</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="h-10 w-10 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="User profile avatar" class="h-full w-full object-cover" data-alt="Close-up portrait of a professional hardware engineer in a clean studio setting with soft cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTc5CNUnmzl-OoyjrXt5-2o6qD10lAE_AaJEmOJdq3NEHqhiDGhUn87PKCZYmfKqQxcodo1EsqT_J6pYmSOd3ZZ3b56m5gy9VIq4b_lMBgpuW_z9v018aPsdhlM_GVA6TSS-SZ0SLw1OIl4uN0A3E21yIRQljQmpoCQY5nl6zhbKExvlyR_B1pwIw0SKatTcbMNsYteQXDVTVBVgRES87ckNlZrKd9_ZGo_YyQ8w1CaHiWKz68FnnKNyrnGC5RsJG12PQ8bj-ZC_k"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-4 md:px-8 max-w-7xl mx-auto">
+<!-- Header Section -->
+<div class="mb-12">
+<span class="text-primary font-bold tracking-widest text-[10px] uppercase mb-2 block">System Comparison</span>
+<h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface">Build Confrontation</h1>
+<p class="text-on-surface-variant mt-4 max-w-2xl leading-relaxed">Surgical precision in component matching. Evaluate the thermal efficiency, compute power, and value proposition between your top two configurations.</p>
+</div>
+<!-- Comparison Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+<!-- Build 1: "The Silent Titan" -->
+<div class="space-y-6">
+<div class="bg-surface-container-lowest rounded-2xl p-8 shadow-[0_24px_48px_-12px_rgba(0,88,188,0.06)] relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4">
+<span class="bg-primary-container text-on-primary-container text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">Configuration A</span>
+</div>
+<div class="flex flex-col gap-6">
+<div class="w-full aspect-video rounded-xl overflow-hidden bg-surface-container-low">
+<img alt="Build 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="High-end custom PC build with minimalist white internal lighting, frosted glass side panel, and clean cable management" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiF7CR41xWDzhfxtfmNBarHS2oSE_SHflkWIMSVfFwhzY2goUImNx0ZvAbVcCzx9ynEilkKqw6hoL4Nhwr9la-jnqAHByRg156w_2cX2KQElmGR4NVLVPLdCstFoO4JDc-WgesdfQtnNX11RAzyVhs3ZFAlfudp9fpbqx2EDsiyylSpQVe9dQ21XnXXUxDSCD5pr1d9DwvSdaG5awMWa4ePXpZQPVncc8OloYgX2mjrXcUuPpJjJc06grbq2DZpWCEBuVmH6dsbZ4"/>
+</div>
+<div>
+<h2 class="text-2xl font-bold tracking-tight">The Silent Titan</h2>
+<p class="text-on-surface-variant text-sm mt-1">Focused on acoustics and workstation stability.</p>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="text-3xl font-black tracking-tighter text-primary">$3,499</span>
+<span class="text-label-sm text-on-surface-variant uppercase tracking-widest font-bold text-[10px]">USD</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Specs List 1 -->
+<div class="bg-surface-container-low rounded-2xl p-6 space-y-4">
+<div class="flex justify-between items-center p-4 bg-surface-container-lowest rounded-xl">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant block">Processor</span>
+<span class="text-sm font-semibold">Intel Core i9-14900K</span>
+</div>
+<span class="material-symbols-outlined text-primary">computer</span>
+</div>
+<div class="flex justify-between items-center p-4 bg-blue-50/50 rounded-xl border border-primary/10">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary block">Graphics</span>
+<span class="text-sm font-semibold">RTX 4090 Founder's Ed.</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-full">+12% FPS</span>
+<span class="material-symbols-outlined text-primary">videogame_asset</span>
+</div>
+</div>
+<div class="flex justify-between items-center p-4 bg-surface-container-lowest rounded-xl">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant block">Memory</span>
+<span class="text-sm font-semibold">64GB DDR5 6400MT/s</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">memory</span>
+</div>
+<div class="flex justify-between items-center p-4 bg-surface-container-lowest rounded-xl">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant block">Thermals</span>
+<span class="text-sm font-semibold">360mm AIO Liquid</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">ac_unit</span>
+</div>
+</div>
+</div>
+<!-- Build 2: "Velocity Pro" -->
+<div class="space-y-6">
+<div class="bg-surface-container-lowest rounded-2xl p-8 shadow-[0_24px_48px_-12px_rgba(0,0,0,0.04)] relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4">
+<span class="bg-surface-container-highest text-on-surface-variant text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">Configuration B</span>
+</div>
+<div class="flex flex-col gap-6">
+<div class="w-full aspect-video rounded-xl overflow-hidden bg-surface-container-low">
+<img alt="Build 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Cyberpunk style PC rig with vibrant neon blue and orange lighting, vertical GPU mount, and transparent liquid cooling tubes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMj5RBqGBrUy81i5gPLxLNNYxhquio4qOdUq-7Oqu0w8Bnnw9k25HaXdx_q_S5fuN2jSNQL_fnGXBWtb_c4BIUabmFsUL7duglP4Z2cEwU9iqJWJPZeGlmomOn17NQFQ5zfYywH2YaMtBzLpw_hIz2XxOjr5kptNVOZFegP1XhtvqEoB4xbpLkQP3Hmib81WXupCBIP3g4zwvYu0U1OnMBYwRVVLuQINQTTcKaxW2bzUyR3IbCZR1KnnglM0wqYN06hYPBtIQnDmk"/>
+</div>
+<div>
+<h2 class="text-2xl font-bold tracking-tight">Velocity Pro</h2>
+<p class="text-on-surface-variant text-sm mt-1">Maximum throughput for 4K rendering pipelines.</p>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="text-3xl font-black tracking-tighter text-on-surface">$2,850</span>
+<span class="text-label-sm text-on-surface-variant uppercase tracking-widest font-bold text-[10px]">USD</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Specs List 2 -->
+<div class="bg-surface-container-low rounded-2xl p-6 space-y-4">
+<div class="flex justify-between items-center p-4 bg-blue-50/50 rounded-xl border border-primary/10">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary block">Processor</span>
+<span class="text-sm font-semibold">AMD Ryzen 9 7950X3D</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-full">Best Value</span>
+<span class="material-symbols-outlined text-primary">computer</span>
+</div>
+</div>
+<div class="flex justify-between items-center p-4 bg-surface-container-lowest rounded-xl">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant block">Graphics</span>
+<span class="text-sm font-semibold">RTX 4080 Super</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">videogame_asset</span>
+</div>
+<div class="flex justify-between items-center p-4 bg-surface-container-lowest rounded-xl">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant block">Memory</span>
+<span class="text-sm font-semibold">32GB DDR5 6000MT/s</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">memory</span>
+</div>
+<div class="flex justify-between items-center p-4 bg-blue-50/50 rounded-xl border border-primary/10">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary block">Thermals</span>
+<span class="text-sm font-semibold">High-Perf Air Cooling</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-full">-5°C Idle</span>
+<span class="material-symbols-outlined text-primary">air</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Metric Table (Minimalist) -->
+<div class="mt-16 bg-surface-container-lowest rounded-3xl p-8 overflow-hidden">
+<h3 class="text-xl font-bold tracking-tight mb-8">Performance Metrics</h3>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">
+<th class="pb-6">Attribute</th>
+<th class="pb-6">Silent Titan</th>
+<th class="pb-6">Velocity Pro</th>
+<th class="pb-6">Analysis</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<tr class="group">
+<td class="py-6 font-semibold">Cinebench R23</td>
+<td class="py-6 text-primary font-bold">38,500 pts</td>
+<td class="py-6">36,200 pts</td>
+<td class="py-6 text-sm text-on-surface-variant">Intel leads in multi-core throughput.</td>
+</tr>
+<tr class="group">
+<td class="py-6 font-semibold">TimeSpy Extreme</td>
+<td class="py-6 text-primary font-bold">19,400 pts</td>
+<td class="py-6">15,800 pts</td>
+<td class="py-6 text-sm text-on-surface-variant">4090 massive advantage in 4K raster.</td>
+</tr>
+<tr class="group">
+<td class="py-6 font-semibold">Peak Noise</td>
+<td class="py-6">32 dBA</td>
+<td class="py-6 text-primary font-bold">28 dBA</td>
+<td class="py-6 text-sm text-on-surface-variant">Air cooling surprisingly quieter at load.</td>
+</tr>
+<tr class="group">
+<td class="py-6 font-semibold">Idle TDP</td>
+<td class="py-6">115W</td>
+<td class="py-6 text-primary font-bold">65W</td>
+<td class="py-6 text-sm text-on-surface-variant">AMD 3D V-Cache efficiency shines.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- AI Selection Action -->
+<div class="mt-12 flex flex-col md:flex-row gap-4 justify-center items-center">
+<button class="w-full md:w-auto bg-tertiary-container text-on-tertiary-container backdrop-blur px-8 py-4 rounded-full font-bold flex items-center justify-center gap-3 active:scale-95 transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">psychology</span>
+                Let AI Choose Best Value
+            </button>
+<button class="w-full md:w-auto bg-primary bg-gradient-to-br from-primary to-primary-container text-on-primary px-12 py-4 rounded-full font-bold shadow-lg active:scale-95 transition-all">
+                Confirm Build Selection
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full rounded-t-[24px] z-50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-2xl shadow-[0_-8px_30px_rgb(0,0,0,0.04)] border-t border-slate-200/20 dark:border-slate-800/20 flex justify-around items-center h-20 px-4 pb-2">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">
+<span class="material-symbols-outlined">architecture</span>
+<span class="text-[10px] font-bold tracking-widest uppercase mt-1">Build</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">
+<span class="material-symbols-outlined">speed</span>
+<span class="text-[10px] font-bold tracking-widest uppercase mt-1">Benchmark</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">
+<span class="material-symbols-outlined">psychology</span>
+<span class="text-[10px] font-bold tracking-widest uppercase mt-1">AI Chat</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-2xl px-5 py-2 transform scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">compare_arrows</span>
+<span class="text-[10px] font-bold tracking-widest uppercase mt-1">Compare</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold tracking-widest uppercase mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

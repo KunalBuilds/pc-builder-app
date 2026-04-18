@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Splash Screen — PC Architect · Apple Glass / Editorial Light Theme -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- Background: radial glow from primary-fixed (top) and secondary-fixed (bottom) -->
+    <!-- Simulated with two overlapping rounded views -->
+    <View
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="-80dp"
+        android:layout_marginEnd="-80dp"
+        android:background="@color/primary_fixed"
+        android:alpha="0.20" />
+
+    <View
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_gravity="bottom|start"
+        android:layout_marginBottom="-60dp"
+        android:layout_marginStart="-60dp"
+        android:background="@color/secondary_fixed"
+        android:alpha="0.18" />
+
+    <!-- Center content -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Logo container — white rounded square (Apple icon style) -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            app:cardBackgroundColor="@color/surface_container_lowest"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:src="@drawable/pc_builder_icon"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- App name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PC ARCHITECT"
+            android:textColor="@color/primary"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.04"
+            android:gravity="center"
+            android:layout_marginBottom="6dp" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HIGH-END HARDWARE EDITORIAL"
+            android:textColor="@color/on_surface_variant"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.2"
+            android:alpha="0.6"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- Bottom: loading progress + version -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="64dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Slim progress bar -->
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            app:indicatorColor="@color/primary"
+            app:trackColor="@color/surface_container_highest"
+            app:trackCornerRadius="4dp"
+            android:layout_marginBottom="14dp" />
+
+        <!-- Loading label with dot pulse -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INITIALIZING SYSTEM"
+                android:textColor="@color/on_surface_variant"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.2" />
+
+            <View
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_marginStart="8dp"
+                android:background="@color/tertiary"
+                android:backgroundTint="@color/tertiary" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Version footnote -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:text="v4.0.0 — Precision Orchestration"
+        android:textColor="@color/on_surface_variant"
+        android:textSize="9sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.2"
+        android:alpha="0.40" />
+
+</FrameLayout>
