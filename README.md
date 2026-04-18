@@ -11,6 +11,20 @@ A PC Builder app for the Indian market. Build, compare, and get AI-powered upgra
 
 ---
 
+## 📸 App Screenshots
+
+<div align="center">
+  <img src="android%20studio%20ss/1.png" width="30%">
+  <img src="android%20studio%20ss/2.png" width="30%">
+  <img src="android%20studio%20ss/3.png" width="30%">
+</div>
+<div align="center">
+  <img src="android%20studio%20ss/4.png" width="30%">
+  <img src="android%20studio%20ss/5.png" width="30%">
+</div>
+
+---
+
 ## 🚀 Setup Instructions
 
 ### Step 1: Firebase Setup (Required for Auth)
